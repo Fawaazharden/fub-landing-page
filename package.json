@@ -1,0 +1,7 @@
+{
+  "name":"fub-landing-page",
+  "version":"1.0.0",
+  "private":true,
+  "type":"module",
+  "scripts":{"check":"node scripts/check.mjs","start":"python -m http.server 4173"}
+}
