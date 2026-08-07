@@ -62,8 +62,11 @@ subscription I cannot leave*, and *my agents will not use it*.
 
 ## 3. The anchor: Structurely Company plan only
 
-The landing page compares **one plan against one plan**, in two cards that stack on mobile.
-Never a wide table, never a horizontal scroll. Five rows:
+The landing page compares **one plan against one plan** in a single grid: the row label
+spans both value columns, and the two values sit side by side. Never a wide table, never a
+horizontal scroll, and never two stacked cards that repeat every label (that cost 1620px on
+a phone and made you scroll a full screen of the competitor before reaching us). From 900px
+the label moves into a column of its own. Five rows:
 
 | | Structurely, Company | This build |
 |---|---|---|
@@ -357,7 +360,15 @@ Positioning line to keep: **every other AI sends the same three listings to ever
 Most visitors arrive on a phone. Mobile is the design, not the fallback.
 
 - Every layout decision starts at 375px and grows up. The body must not scroll sideways at
-  320, 375 or 414px.
+  320, 375 or 414px, and **no element may overflow its own container either**.
+- **The type scale steps down below 640px as a set**, not one component at a time: body 16px,
+  secondary 15 to 16px, h1 min 31px, h2 min 25px, section padding 56px. At the desktop scale
+  the page read like a desktop layout squeezed onto a phone.
+- **The three graphics keep their desktop shape on a phone.** The hero timeline is horizontal
+  at every width, Intent Match is side by side down to 360px, and the comparison is side by
+  side at every width. A stacked variant of any of them means scrolling to reach the end of a
+  graphic whose whole point is being taken in at a glance. Below 360px Intent Match is the one
+  exception: two 124px columns cannot hold a message bubble, so it stacks.
 - Tap targets 44px minimum. Nothing important behind a hover.
 - The hero headline, subhead, button and reassurance line all land in the first screen at
   375x812 (a real iPhone shows about 635px on load). The visual sits just below.
