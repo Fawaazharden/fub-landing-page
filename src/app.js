@@ -8,6 +8,24 @@ const mobile = document.querySelector('[data-mobile]');
 const sticky = document.querySelector('[data-sticky]');
 const book = document.querySelector('#book');
 
+// The landing page already has a compact comparison block. Point its mobile nav
+// entry at the full comparison route and add one clear path from the compact block
+// without changing the homepage's carefully balanced desktop navigation width.
+document.querySelectorAll('.mobile-nav a[href="#compare"]').forEach((a) => {
+  a.href = 'comparison/';
+});
+const comparisonNote = document.querySelector('#compare .cmp-note');
+if (comparisonNote && !document.querySelector('#compare .comparison-page-link')) {
+  const wrap = document.createElement('p');
+  wrap.className = 'comparison-page-link mt-30';
+  const link = document.createElement('a');
+  link.className = 'button secondary';
+  link.href = 'comparison/';
+  link.textContent = 'Compare all platforms';
+  wrap.append(link);
+  comparisonNote.insertAdjacentElement('afterend', wrap);
+}
+
 const closeMenu = () => {
   if (!menu || !mobile) return;
   menu.setAttribute('aria-expanded', 'false');
