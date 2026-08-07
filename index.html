@@ -76,19 +76,87 @@
     </div>
 
     <div>
-      <div class="record">
-        <div class="record-head">
-          <b>Follow Up Boss &middot; person record</b>
-          <span class="tag">AI active</span>
+      <div class="crm">
+        <div class="crm-bar">
+          <span class="crm-dots"><i></i><i></i><i></i></span>
+          <b>Follow Up Boss &middot; Person</b>
+          <span class="crm-live"><i></i>AI ACTIVE</span>
         </div>
-        <div class="record-row new"><small>Lead type</small><span>Buyer</span></div>
-        <div class="record-row new"><small>Preferred areas</small><span>Cherry Hill</span></div>
-        <div class="record-row new"><small>Price range</small><span>$340,000 to $440,000</span></div>
-        <div class="record-row new"><small>Beds</small><span>3</span></div>
-        <div class="record-row new"><small>Timeline</small><span>Spring</span></div>
-        <div class="record-row"><small>Assigned agent</small><span>Claimed on live transfer</span></div>
-        <div class="record-row"><small>Activity</small><span>Calls, texts, recording and transcript, in order</span></div>
-        <div class="record-foot">Illustrative record, laid out from the acceptance run. Rows like these get written by the AI onto the record your agents already open, so there is no second dashboard for them to learn.</div>
+        <div class="crm-body">
+          <aside class="crm-side">
+            <div class="crm-person">
+              <span class="crm-avatar">DR</span>
+              <span><b>D. Reyes</b><small>Website registration</small></span>
+            </div>
+            <div class="crm-field"><small>Stage</small><span>Qualified</span></div>
+            <div class="crm-field ai"><small>Type</small><span>Buyer</span></div>
+            <div class="crm-field ai"><small>Areas</small><span>Cherry Hill</span></div>
+            <div class="crm-field ai"><small>Price</small><span>$340k to $440k</span></div>
+            <div class="crm-field ai"><small>Beds</small><span>3</span></div>
+            <div class="crm-field ai"><small>Timeline</small><span>Spring</span></div>
+            <div class="crm-tags">
+              <span class="crm-tag on">AI: Active</span>
+              <span class="crm-tag">Cherry Hill</span>
+            </div>
+          </aside>
+
+          <div class="crm-feed">
+            <h4>Activity</h4>
+
+            <div class="act out">
+              <i></i>
+              <div class="act-head"><b>Text sent</b><time>7:42 PM</time></div>
+              <div class="act-body">Hi there, this is Hallie with Prime Realty Partners. You were looking at a few listings on our site just now. Are you hoping to buy in the next couple of months, or still early?</div>
+              <div class="act-meta"><span class="act-chip good">2.4s after lead created</span></div>
+            </div>
+
+            <div class="act in">
+              <i></i>
+              <div class="act-head"><b>Text received</b><time>7:44 PM</time></div>
+              <div class="act-body">still early honestly. maybe spring</div>
+            </div>
+
+            <div class="act call">
+              <i></i>
+              <div class="act-head"><b>Call</b><time>7:47 PM</time></div>
+              <div class="act-body">No answer, reached voicemail. Not counted as a connection, so nothing was recorded as a stated preference.
+                <div class="act-meta">
+                  <span class="act-chip">Outcome: Left Message</span>
+                  <span class="act-chip">0:19</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="act in">
+              <i></i>
+              <div class="act-head"><b>Text received</b><time>7:51 PM</time></div>
+              <div class="act-body">Cherry Hill mostly. maybe up to 440. need 3 beds minimum</div>
+            </div>
+
+            <div class="act note">
+              <i></i>
+              <div class="act-head"><b>Note added by AI</b><time>7:52 PM</time></div>
+              <div class="act-body">Four answers captured and written to custom fields: area, price ceiling, bedrooms, timeline. Search resolved Cherry Hill to 3 ZIP codes.
+                <span class="act-url">yourdomain.com/search?zip=08002,08003,08034&amp;price=340000-440000&amp;beds=3</span>
+              </div>
+            </div>
+
+            <div class="act win">
+              <i></i>
+              <div class="act-head"><b>Live transfer connected</b><time>8:04 PM</time></div>
+              <div class="act-body">Lead asked for an agent. Cherry Hill group rang, claimed by keypress, call bridged.
+                <div class="act-meta">
+                  <span class="act-chip good">Assigned</span>
+                  <span class="act-chip">1:24</span>
+                  <span class="act-chip">Recording</span>
+                  <span class="act-chip">Transcript</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="crm-foot">Illustrative record, laid out from the acceptance run. Every row here is written by the AI onto the person record your agents already open, so there is no second dashboard for them to learn.</div>
       </div>
     </div>
   </div>
@@ -581,7 +649,7 @@
           <li>Messaging registration and number setup handled with you</li>
           <li>Acceptance testing against your real scenarios before a lead sees it</li>
           <li>Configuration documentation and an operational handover</li>
-          <li>A private channel with the person who built it, not a ticket queue</li>
+          <li>A private channel straight to the people who built it, not a ticket queue</li>
         </ul>
       </div>
     </div>
@@ -610,6 +678,35 @@
           <small>Difference over a year</small>
           <strong id="annual-save">$9,828</strong>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AFTER HANDOVER ============ -->
+<section class="section soft">
+  <div class="container split">
+    <div class="section-head reveal">
+      <div class="kicker">After handover</div>
+      <h2>The obvious question about owning it: who fixes it in month six?</h2>
+      <p>Worth answering plainly, because &ldquo;no monthly fee&rdquo; can just as easily read as &ldquo;you are on your own&rdquo;. Two things are true at the same time, and you should weigh both.</p>
+      <ul class="check-list">
+        <li><b>Nothing switches off if we stop talking.</b> The system runs on accounts in your name. There is no licence to lapse and no server of ours to turn off.</li>
+        <li><b>The platforms underneath it do change.</b> Follow Up Boss ships API changes. Carriers change registration rules. Model providers deprecate versions. That is real and it does not stop because the build is finished.</li>
+      </ul>
+    </div>
+    <div class="reveal">
+      <div class="callout note" style="margin-top:0">
+        <strong>So there is an optional retainer</strong>
+        <p>For teams who want somebody watching those platforms and handling it when one of them moves, we quote a monthly retainer on the call. It is optional, it is not required for the system to keep running, and it is priced against your setup rather than listed here as a number that would be wrong for most people.</p>
+      </div>
+      <div class="callout">
+        <strong>Or hand it to your own developer</strong>
+        <p>The configuration and documentation are written so somebody else can pick it up. Plenty of teams at this size already have a technical person. If that is you, take it in house and pay us nothing.</p>
+      </div>
+      <div class="callout warn">
+        <strong>What we will not do</strong>
+        <p>Promise you a response time we cannot hold, or pretend a one time build never needs attention again. If a vendor tells you their AI stack is finished forever, they have not run one against a carrier for very long.</p>
       </div>
     </div>
   </div>
@@ -682,6 +779,11 @@
       <details>
         <summary>What happens if it says something wrong to one of my leads?</summary>
         <p>You remove the tag on that contact and the AI stops immediately, mid sequence, and a human takes it. For anything wider there is a global stop that halts conversations already in flight. Every message and call is on the record with a timestamp, so you can see exactly what was said rather than reconstructing it. We would rather you had the log than our reassurance.</p>
+      </details>
+      <details>
+        <summary>What happens when something breaks after handover?</summary>
+        <p>Two things are true at once. The system runs on accounts in your name, so nothing switches off if we stop working together. And the platforms underneath it do change: Follow Up Boss ships API changes, carriers change registration rules, model providers deprecate versions.</p>
+        <p>So there is an optional monthly retainer for teams who want us watching that and handling it. We quote it on the call against your actual setup. It is optional, the system does not need it to keep running, and if you would rather your own developer owned it, the configuration and documentation are written so they can.</p>
       </details>
       <details>
         <summary>What exactly do we own at the end?</summary>
@@ -793,7 +895,7 @@
         {"@type":"Question","name":"Can it work aged or imported leads?","acceptedAnswer":{"@type":"Answer","text":"Yes, where consent, brokerage policy, carrier rules, suppression lists and opt outs permit it. Aged and purchased lists carry obligations that fresh inbound leads do not, so eligible segments get defined and approved before anything sends. This is the part of a reactivation project that takes the longest and it is not the part to rush."}},
         {"@type":"Question","name":"How long does an implementation take?","acceptedAnswer":{"@type":"Answer","text":"Discovery is quick, usually a call and a follow up. The build depends on scope, and acceptance testing depends on how fast your side can run scenarios with us. A texting only build on one lead source is a short project. Voice, territory routing, live transfer and reactivation across a full roster is not. We give you a real date after discovery, not before."}},
         {"@type":"Question","name":"What happens if it says something wrong to one of my leads?","acceptedAnswer":{"@type":"Answer","text":"You remove the tag on that contact and the AI stops immediately, mid sequence, and a human takes it. For anything wider there is a global stop that halts conversations already in flight. Every message and call is on the record with a timestamp, so you can see exactly what was said rather than reconstructing it. We would rather you had the log than our reassurance."}},
-        {"@type":"Question","name":"What exactly do we own at the end?","acceptedAnswer":{"@type":"Answer","text":"The accounts, the API keys, the phone number and its registration, the configuration, the documentation, and the conversation data, because all of it lives in systems registered to you. You pay raw telephony, model and hosting costs directly rather than renting our software indefinitely. If you stop working with us, nothing switches off."}},
+        {"@type":"Question","name":"What happens when something breaks after handover?","acceptedAnswer":{"@type":"Answer","text":"Two things are true at once. The system runs on accounts in your name, so nothing switches off if we stop working together. And the platforms underneath it do change: Follow Up Boss ships API changes, carriers change registration rules, model providers deprecate versions."}},{"@type":"Question","name":"What exactly do we own at the end?","acceptedAnswer":{"@type":"Answer","text":"The accounts, the API keys, the phone number and its registration, the configuration, the documentation, and the conversation data, because all of it lives in systems registered to you. You pay raw telephony, model and hosting costs directly rather than renting our software indefinitely. If you stop working with us, nothing switches off."}},
         {"@type":"Question","name":"Is there a free pilot?","acceptedAnswer":{"@type":"Answer","text":"Sometimes. It depends on your lead volume, your CRM setup and whether we think we can prove something meaningful quickly, so it is a conversation on the call rather than a standing offer on a page. What is always free is the teardown itself and the written map of your lead flow that comes out of it."}}
       ]
     }
