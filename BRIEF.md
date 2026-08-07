@@ -16,8 +16,9 @@ idea per section.
 
 - One headline plus at most one or two short sentences per section. If a section needs a
   list, three lean items, not nine.
-- Large type. Body 17px, secondary copy 15 to 17px, nothing in copy under 14px.
-- Section padding 72px on phones, 96 to 120px on desktop. Do not tighten it to fit more in.
+- Large type on desktop: body 17px, secondary 17 to 18px. On phones the whole scale steps
+  down one notch together (body 16px, secondary 15 to 16px). See section 10.
+- Section padding 56px on phones, 96 to 120px on desktop. Do not tighten it to fit more in.
   If a section will not fit, cut the copy, not the spacing.
 - The page should be readable top to bottom from headlines alone in about 20 seconds.
 
