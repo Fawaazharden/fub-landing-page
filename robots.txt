@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://vocalxlabs.com/fub/sitemap.xml
+Sitemap: https://vocalxlabs.com/sitemap.xml

@@ -95,13 +95,13 @@ for (const p of pages) {
     errors.push(`${rel}: placeholder copy left in`);
   }
 
-  // Internal links resolve to a real file. Root-absolute links carry the deploy
-  // prefix (the site is served from /fub/), so strip it before resolving on disk.
+  // Internal links resolve to a real file. The site is served from the domain
+  // root, so a root-absolute link maps straight onto the repo root.
   for (const m of raw.matchAll(/(?:href|src)="(?!https?:|mailto:|tel:|#|data:)([^"#?]+)/g)) {
     let target = m[1];
     if (target.endsWith('/')) target += 'index.html';
     const abs = target.startsWith('/')
-      ? resolve(ROOT, target.replace(/^\/fub\//, '').replace(/^\//, ''))
+      ? resolve(ROOT, target.replace(/^\//, ''))
       : resolve(dirname(p), target);
     try { await stat(abs); }
     catch { errors.push(`${rel}: dead internal link -> ${m[1]}`); }

@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b1020">
-<title>Follow Up Boss AI Implementation | Calling, Texting, Routing</title>
-<meta name="description" content="AI calling, texting and territory routing built into the Follow Up Boss you already run. One implementation from $2,500, then no platform fee.">
-<link rel="canonical" href="https://vocalxlabs.com/fub/">
-<meta property="og:title" content="Follow Up Boss AI Implementation | Calling, Texting, Routing">
-<meta property="og:description" content="AI calling, texting, qualification and territory routing built into Follow Up Boss. One implementation from $2,500. No platform fee after it ships.">
+<meta name="theme-color" content="#0c1120">
+<title>Follow Up Boss AI: Calling, Texting, Intent Match | VocalX Labs</title>
+<meta name="description" content="We build AI calling, texting and listing matched follow up inside the Follow Up Boss you already run. One setup from $2,500, then no monthly platform fee.">
+<link rel="canonical" href="https://vocalxlabs.com/">
+<meta property="og:title" content="Follow Up Boss AI: Calling, Texting, Intent Match | VocalX Labs">
+<meta property="og:description" content="AI calling, texting, qualification and listing matched follow up, built inside Follow Up Boss. One setup from $2,500. No platform fee after it ships.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://vocalxlabs.com/fub/">
-<meta property="og:image" content="https://vocalxlabs.com/fub/img/logo.png">
+<meta property="og:url" content="https://vocalxlabs.com/">
+<meta property="og:image" content="https://vocalxlabs.com/img/logo.png">
 <meta property="og:site_name" content="Vocalxlabs">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="img/favicon.png">
@@ -26,30 +26,30 @@
 <header class="header" data-header>
   <div class="container nav">
     <a class="brand" href="./">
-      <img src="img/logo.png" alt="" width="32" height="32">
-      <span class="brand-copy"><strong>FUB Implementation</strong><small>by VocalX Labs</small></span>
+      <img src="img/logo.png" alt="" width="30" height="30">
+      <span class="brand-copy"><strong>VocalX Labs</strong><small>Follow Up Boss AI</small></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#how">How it works</a>
+      <a href="#intent">Intent Match</a>
       <a href="#build">What we build</a>
-      <a href="#proof">Case study</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </nav>
-    <a class="button primary" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Map my lead flow</a>
+    <a class="button primary" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Book a call</a>
     <button class="menu" data-menu aria-label="Open navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
   <nav class="mobile-nav" data-mobile hidden aria-label="Mobile">
     <a href="#how">How it works</a>
+    <a href="#intent">Intent Match</a>
     <a href="#build">What we build</a>
-    <a href="#proof">Case study</a>
-    <a href="#honest">What went wrong</a>
+    <a href="#compare">Compare</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
-    <a href="case-studies/timothy-fub-implementation/">Full build log</a>
-    <a class="button primary" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Map my lead flow</a>
+    <a href="case-studies/timothy-fub-implementation/">Case study</a>
+    <a class="button primary" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Book my free teardown call</a>
   </nav>
 </header>
 
@@ -59,739 +59,352 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow"><i></i>For teams closing 15+ deals a month</div>
-      <h1>Keep Follow Up Boss.<br><span class="gradient">Own the AI that works every lead in it.</span></h1>
-      <p class="lead">AI calling, texting, qualification and territory routing, built into the Follow Up Boss account you already have. One implementation from $2,500. After that the accounts are in your name and the bills come to you, not to us.</p>
+      <div class="eyebrow">For agents and teams closing 15+ deals a year</div>
+      <h1>Every lead worked in seconds.<br><span class="gradient">Inside the Follow Up Boss you already run.</span></h1>
+      <p class="lead">We build AI calling, texting and listing matched follow up into your CRM. One setup, from $2,500. No monthly platform fee, because you own it.</p>
       <div class="actions">
-        <a class="button primary large" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Map my Follow Up Boss lead flow, free</a>
-        <a class="button secondary large" href="#proof">See the build log</a>
+        <a class="button primary large" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Book my free teardown call</a>
       </div>
-      <p class="hero-assure">15 minutes. You leave with a written map of your own lead flow, whether you hire us or not.</p>
-      <div class="proof-bar">
-        <div><b>2.4 sec</b><span>Lead hit the CRM, first text was out. Measured on the Prime Realty Partners build.</span></div>
-        <div><b>3,272</b><span>Contacts in that account. Nothing migrated, nothing exported, nothing broken.</span></div>
-        <div><b>$0 / mo</b><span>Platform fee from us once the build ships. You pay your own vendors direct.</span></div>
-      </div>
-      <p class="hero-more"><a href="#proof">See the full build log, defects included</a></p>
+      <p class="hero-assure">15 minutes. You leave with a map of your own lead flow.</p>
     </div>
 
-    <div>
-      <div class="crm">
-        <div class="crm-bar">
-          <span class="crm-dots"><i></i><i></i><i></i></span>
-          <b>Follow Up Boss &middot; Person</b>
-          <span class="crm-live"><i></i>AI ACTIVE</span>
+    <!-- Animated lifecycle. Static default is the finished state, so this reads
+         fine with JS off or reduced motion on. app.js walks the .on class. -->
+    <div class="tl" data-timeline>
+      <div class="tl-head"><b>One lead, start to handoff</b><span>Live</span></div>
+      <div class="tl-track">
+        <div class="tl-stop">
+          <div class="tl-node"><span class="tl-dot"></span><span class="tl-label">New lead</span></div>
+          <div class="tl-chip"><b>Website registration</b><span>7:41 PM</span></div>
         </div>
-        <div class="crm-body">
-          <aside class="crm-side">
-            <div class="crm-person">
-              <span class="crm-avatar">DR</span>
-              <span><b>D. Reyes</b><small>Website registration</small></span>
-            </div>
-            <div class="crm-field"><small>Stage</small><span>Qualified</span></div>
-            <div class="crm-field ai"><small>Type</small><span>Buyer</span></div>
-            <div class="crm-field ai"><small>Areas</small><span>Cherry Hill</span></div>
-            <div class="crm-field ai"><small>Price</small><span>$340k to $440k</span></div>
-            <div class="crm-field ai"><small>Beds</small><span>3</span></div>
-            <div class="crm-field ai"><small>Timeline</small><span>Spring</span></div>
-            <div class="crm-tags">
-              <span class="crm-tag on">AI: Active</span>
-              <span class="crm-tag">Cherry Hill</span>
-            </div>
-          </aside>
-
-          <div class="crm-feed">
-            <h4>Activity</h4>
-
-            <div class="act out">
-              <i></i>
-              <div class="act-head"><b>Text sent</b><time>7:42 PM</time></div>
-              <div class="act-body">Hi there, this is Hallie with Prime Realty Partners. You were looking at a few listings on our site just now. Are you hoping to buy in the next couple of months, or still early?</div>
-              <div class="act-meta"><span class="act-chip good">2.4s after lead created</span></div>
-            </div>
-
-            <div class="act in">
-              <i></i>
-              <div class="act-head"><b>Text received</b><time>7:44 PM</time></div>
-              <div class="act-body">still early honestly. maybe spring</div>
-            </div>
-
-            <div class="act call">
-              <i></i>
-              <div class="act-head"><b>Call</b><time>7:47 PM</time></div>
-              <div class="act-body">No answer, reached voicemail. Not counted as a connection, so nothing was recorded as a stated preference.
-                <div class="act-meta">
-                  <span class="act-chip">Outcome: Left Message</span>
-                  <span class="act-chip">0:19</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="act in">
-              <i></i>
-              <div class="act-head"><b>Text received</b><time>7:51 PM</time></div>
-              <div class="act-body">Cherry Hill mostly. maybe up to 440. need 3 beds minimum</div>
-            </div>
-
-            <div class="act note">
-              <i></i>
-              <div class="act-head"><b>Note added by AI</b><time>7:52 PM</time></div>
-              <div class="act-body">Four answers captured and written to custom fields: area, price ceiling, bedrooms, timeline. Search resolved Cherry Hill to 3 ZIP codes.
-                <span class="act-url">yourdomain.com/search?zip=08002,08003,08034&amp;price=340000-440000&amp;beds=3</span>
-              </div>
-            </div>
-
-            <div class="act win">
-              <i></i>
-              <div class="act-head"><b>Live transfer connected</b><time>8:04 PM</time></div>
-              <div class="act-body">Lead asked for an agent. Cherry Hill group rang, claimed by keypress, call bridged.
-                <div class="act-meta">
-                  <span class="act-chip good">Assigned</span>
-                  <span class="act-chip">1:24</span>
-                  <span class="act-chip">Recording</span>
-                  <span class="act-chip">Transcript</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
+        <div class="tl-stop">
+          <div class="tl-node"><span class="tl-dot"></span><span class="tl-label">Text sent</span></div>
+          <div class="tl-chip"><b>First reply out</b><span>7:42 PM</span></div>
         </div>
-        <div class="crm-foot">Illustrative record, laid out from the acceptance run. Every row here is written by the AI onto the person record your agents already open, so there is no second dashboard for them to learn.</div>
+        <div class="tl-stop">
+          <div class="tl-node"><span class="tl-dot"></span><span class="tl-label">Call</span></div>
+          <div class="tl-chip"><b>Call picked up</b><span>7:47 PM</span></div>
+        </div>
+        <div class="tl-stop">
+          <div class="tl-node"><span class="tl-dot"></span><span class="tl-label">Qualified</span></div>
+          <div class="tl-chip"><b>Cherry Hill</b><span>$340k to $440k, 3 beds</span></div>
+        </div>
+        <div class="tl-stop">
+          <div class="tl-node"><span class="tl-dot"></span><span class="tl-label">Agent</span></div>
+          <div class="tl-chip"><b>Live transfer connected</b><span>8:04 PM</span></div>
+        </div>
       </div>
+      <p class="tl-foot">Every step lands on the Follow Up Boss person record your agents already open.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ STACK STRIP ============ -->
-<section class="strip">
+<!-- ============ POSITIONING STRIP ============ -->
+<section class="trust">
   <div class="container">
-    <small>Built on accounts registered in your name</small>
-    <div class="strip-list">
-      <strong>Follow Up Boss</strong>
-      <strong>Telnyx</strong>
-      <strong>Retell AI</strong>
-      <strong>Railway</strong>
-      <strong>Your model provider</strong>
-    </div>
+    <b>It is built inside your Follow Up Boss account, not beside it.</b>
+    <p>Every call, text, note, tag and qualification field is written onto the person record your agents already have open. <em>No second dashboard. No new tab. No new login.</em> If your team can use Follow Up Boss today, they can use this tomorrow without being trained on anything.</p>
   </div>
 </section>
 
-<!-- ============ THE PROBLEM ============ -->
+<!-- ============ PROBLEM ============ -->
 <section class="section">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">The gap</div>
-      <h2>A 30 day audit of one client&rsquo;s CRM found 5 of 312 recent leads with any property activity on the record.</h2>
-      <p>That was not a lazy team. Eight licensed agents, a real CRM, a paid AI tool already running, and leads arriving from paid traffic every day. It is just what follow up looks like when it depends on a human having a free minute at the exact moment a stranger decides to reply.</p>
+    <div class="section-head">
+      <div class="kicker">The problem</div>
+      <h2>You are not losing leads. You are losing races.</h2>
+      <p>A buyer registers at 9:14pm and fills in two more forms on two more sites before bed. Whoever gets a real conversation going first takes the appointment. Usually that is decided before your agent has finished dinner.</p>
     </div>
-
-    <div class="grid-3">
-      <article class="card reveal">
-        <span class="num">01</span>
-        <h3>The first reply decides it</h3>
-        <p>Nobody fills in one form. A buyer poking around at 9pm fills in three or four inside ten minutes, and the team that gets a human reply back is usually the one still in the conversation a week later. Your agent was at dinner.</p>
-      </article>
-      <article class="card reveal">
-        <span class="num coral">02</span>
-        <h3>The second attempt rarely happens</h3>
-        <p>Agents work the leads who answer. That is rational and it is also why the rest of the pipeline quietly dies. Nobody decides to abandon a lead. It just never gets touched again.</p>
-      </article>
-      <article class="card reveal">
-        <span class="num violet">03</span>
-        <h3>The database nobody works</h3>
-        <p>The most valuable list you own is the one you already paid for. Thousands of people who raised a hand, went quiet, and are still sitting in Follow Up Boss with a stage nobody has changed in a year.</p>
-      </article>
-    </div>
-
-    <div class="callout warn reveal">
-      <strong>The arithmetic nobody runs</strong>
-      <p>You close 15 a month, so you know your average commission without looking it up. Divide $2,500 by it. We are not going to tell you how many extra closings this produces, because we have not measured that. What we can tell you is that 307 of those 312 leads had nothing on the record at all.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ THE SUBSCRIPTION TRAP ============ -->
-<section class="section soft">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">Why the tool you bought did not fix it</div>
-      <h2>You have probably already paid for AI follow up. Here is why it still feels like renting.</h2>
-      <p>The category standard is a platform fee plus action credits on an annual contract. It works, and plenty of teams get value from it. But read the pricing model closely, because it prices the thing you actually want more of.</p>
-    </div>
-
-    <div class="table-scroll reveal">
-      <table class="cmp">
-        <thead>
-          <tr>
-            <th scope="col">&nbsp;</th>
-            <th scope="col">Structurely, Team</th>
-            <th scope="col">Structurely, Company</th>
-            <th scope="col">This implementation</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">Platform fee</th><td>$499 / month</td><td>$999 / month</td><td class="ours">None after launch</td></tr>
-          <tr><th scope="row">One time cost</th><td>$2,000 onboarding</td><td>$2,500 onboarding</td><td class="ours">From $2,500, the build itself</td></tr>
-          <tr><th scope="row">Per message</th><td>$0.08 per credit</td><td>$0.06 per credit</td><td class="ours">Carrier rate, billed to you by your carrier</td></tr>
-          <tr><th scope="row">When your lead replies to you</th><td>Costs a credit</td><td>Costs a credit</td><td class="ours">Carrier rate, usually under a cent before fees</td></tr>
-          <tr><th scope="row">A five minute AI call</th><td>30 credits</td><td>30 credits</td><td class="ours">Your voice provider&rsquo;s per minute rate</td></tr>
-          <tr><th scope="row">Contract</th><td>Annual, 20% more month to month</td><td>Annual, 20% more month to month</td><td class="ours">None. It is a build, not a seat</td></tr>
-          <tr><th scope="row">Conversation logic</th><td>Four pre built agents, plus a builder</td><td>Four pre built agents, plus a builder</td><td class="ours">Written against your territories and scripts</td></tr>
-          <tr><th scope="row">If you stop paying</th><td>Service stops</td><td>Service stops</td><td class="ours">It keeps running. It is on your accounts</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="scroll-hint">Those are Structurely&rsquo;s published Team and Company numbers as of August 2026. One credit is one SMS sent <em>or received</em>, ten seconds of AI talk time, or two emails. Check them yourself before you use them to decide anything.</p>
-
-    <div class="callout note reveal">
-      <strong>The part worth sitting with</strong>
-      <p>On a credit model, a lead who texts you back four times costs you four credits. The engaged leads are the expensive ones. We would rather you pay your carrier a fraction of a cent and let the conversation run as long as it needs to.</p>
-    </div>
-
-    <div class="callout warn reveal">
-      <strong>Read the two numbers next to each other</strong>
-      <p>Structurely charges $2,500 just to onboard you on its Company plan. Then $999 every month after that, on an annual contract, plus a credit every time one of your own leads replies. Our $2,500 is the entire build. Month two is zero.</p>
-      <div class="actions">
-        <a class="button primary large" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">See what your build would scope to</a>
-      </div>
-    </div>
+    <ul class="points">
+      <li><b>Your speed to lead is set by whoever happens to be free.</b> Nights, weekends, a closing that ran long. The lead does not wait for a gap in your calendar.</li>
+      <li><b>Almost nobody makes the fifth call.</b> Follow up stops at two tries, and the appointment usually lives past that. Dead to you, warm to somebody else.</li>
+      <li><b>People in your database are shopping right now.</b> They are opening listings on your own site this week. Nothing tells your agents, so nobody calls.</li>
+    </ul>
   </div>
 </section>
 
 <!-- ============ HOW IT WORKS ============ -->
-<section class="section" id="how">
-  <div class="container split wide-left">
-    <div class="section-head reveal">
-      <div class="kicker">The mechanism</div>
-      <h2>No migration. No second CRM for your agents to learn.</h2>
-      <p>Follow Up Boss stays the system of record. The AI layer sits behind it, works the lead, and writes everything it learns back onto the person record your team already opens. If an agent never hears the word AI, the implementation is working.</p>
-      <ul class="check-list">
-        <li>Every inbound and outbound AI text lands on the person record, in order, with timestamps.</li>
-        <li>Calls arrive with a recording, a transcript, a summary, and a call outcome your agents already filter on.</li>
-        <li>Qualification answers write into the custom fields you already have, not new ones we invent.</li>
-        <li>Switching the AI on or off for one contact is a tag inside Follow Up Boss. No second tool, no support ticket.</li>
-      </ul>
+<section class="section soft" id="how">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">How it works</div>
+      <h2>Five steps, and your agents never leave the CRM.</h2>
     </div>
-
-    <div class="flow reveal">
-      <div class="flow-step">
+    <div class="flow">
+      <div class="flow-step reveal">
         <span>1</span>
         <div>
           <b>The lead lands in Follow Up Boss</b>
-          <small>From your portal, your site, your paid traffic. Source, owner, group and territory tag are already on the record.</small>
-          <em>CRM</em>
+          <small>Any source. Your site, a portal, an open house, or a list you import.</small>
         </div>
       </div>
-      <div class="flow-step">
+      <div class="flow-step reveal">
         <span>2</span>
         <div>
-          <b>The AI opens a conversation</b>
-          <small>A text that names who is writing and why, then a call. If the call is missed it continues by text rather than dialling again.</small>
-          <em>ENGAGE</em>
+          <b>A text goes out in seconds</b>
+          <small>First reply in under a minute, day or night, from your own number.</small>
         </div>
       </div>
-      <div class="flow-step">
+      <div class="flow-step reveal">
         <span>3</span>
         <div>
-          <b>It qualifies in the lead&rsquo;s own words</b>
-          <small>Area, budget, must haves, timeline, motivation. Whatever your scripts ask. It does not record an answer the lead never gave.</small>
-          <em>QUALIFY</em>
+          <b>The AI calls and holds a real conversation</b>
+          <small>Area, price, timeline, motivation. It asks, it answers back, it keeps going for weeks.</small>
         </div>
       </div>
-      <div class="flow-step">
+      <div class="flow-step reveal">
         <span>4</span>
         <div>
-          <b>The record updates as it goes</b>
-          <small>Texts, calls, transcripts, fields, tags and funnel status, written as they happen.</small>
-          <em>SYNC</em>
+          <b>Everything writes back to the record</b>
+          <small>Fields, notes, tags and the full thread, on the person record your agents already open.</small>
         </div>
       </div>
-      <div class="flow-step">
+      <div class="flow-step reveal">
         <span>5</span>
         <div>
-          <b>A human takes it at the right moment</b>
-          <small>The lead asks for an agent or a showing. The territory group rings, the first to answer claims it, and the assignment writes back.</small>
-          <em>HANDOFF</em>
+          <b>A human takes it from there</b>
+          <small>Live transfer or assignment to the right agent, on rules you set.</small>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ REAL CONVERSATION ============ -->
-<section class="section soft">
+<!-- ============ INTENT MATCH ============
+     The differentiator. Motion mock is driven by app.js walking a .shown class
+     down the [data-i] nodes; the static default state is the finished story. -->
+<section class="section" id="intent">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">What it actually sounds like</div>
-      <h2>Most AI follow up gives itself away inside two messages. This is the shape we build to.</h2>
-      <p>Below is an illustrative thread built from the real conversation flow, with the engineering decisions marked. Every one of those decisions exists because a real client pushed back on an earlier version.</p>
+    <div class="section-head">
+      <div class="kicker">Intent Match</div>
+      <h2>Every other AI sends the same three listings to everybody. This one sends the house they opened three nights running.</h2>
+      <p>Leads tell you what they want by what they open. Intent Match reads it and follows up with listings that actually fit, by text and by voice, while they are still looking.</p>
     </div>
 
-    <div class="split" style="margin-top:28px">
-      <div class="thread reveal">
-        <div class="thread-head">
-          <span class="thread-avatar">H</span>
-          <div><b>Hallie</b><small>Prime Realty Partners</small></div>
-          <span class="thread-src">Visible in FUB</span>
+    <div class="im" data-intent>
+      <div class="im-a">
+        <div class="im-cap">Home activity, on the Follow Up Boss record</div>
+        <div class="im-rows">
+          <div class="im-row" data-i="0">
+            <span class="im-eye"></span>
+            <b>18 Cooper Run Dr, Cherry Hill</b>
+            <i>Tue 8:14 PM</i>
+          </div>
+          <div class="im-row" data-i="1">
+            <span class="im-eye"></span>
+            <b>18 Cooper Run Dr, Cherry Hill<em>Opened again, second night</em></b>
+            <i>Wed 9:02 PM</i>
+          </div>
+          <div class="im-row hot" data-i="2">
+            <span class="im-eye"></span>
+            <b>18 Cooper Run Dr, Cherry Hill<em>4m 12s on the page, third night</em></b>
+            <i>Thu 9:38 PM</i>
+          </div>
+          <div class="im-row" data-i="3">
+            <span class="im-eye"></span>
+            <b>96 Kingston Rd, Voorhees</b>
+            <i>Thu 9:44 PM</i>
+          </div>
         </div>
-        <div class="thread-body">
-          <div class="msg out">Hi there, this is Hallie with Prime Realty Partners. You were looking at a few listings on our site just now. Are you hoping to buy in the next couple of months, or still early?<time>7:42 PM</time></div>
-          <div class="msg in">still early honestly. maybe spring<time>7:44 PM</time></div>
-
-          <div class="thread-note"><span>Reply held 25 to 35 seconds, on purpose</span></div>
-
-          <div class="msg out">Spring is a good target, plenty of time to get ahead of it. What towns are you looking at? I can set you up to see new listings there as they come up.<time>7:44 PM</time></div>
-          <div class="msg in">Cherry Hill mostly. maybe up to 440<time>7:51 PM</time></div>
-          <div class="msg out">Got it, Cherry Hill up to 440. How many bedrooms do you need?<time>7:52 PM</time></div>
-          <div class="msg in">3 minimum<time>7:53 PM</time></div>
-
-          <div class="thread-note"><span>Four answers captured, written to the record</span></div>
-
-          <div class="msg out">Perfect. Before I send those over, would you rather have one of our Cherry Hill agents give you a quick call, or just start with the listings?<time>7:53 PM</time></div>
-          <div class="msg in">just listings for now<time>7:55 PM</time></div>
-          <div class="msg out">No problem at all. Sending them over now.<time>7:55 PM</time></div>
-          <div class="msg out link">your-idx-site.com/search?zip=08002,08003,08034&amp;price=340000-440000&amp;beds=3<time>7:55 PM</time></div>
+        <div class="im-read" data-i="4">
+          <small>What it worked out</small>
+          <b>Cherry Hill, $340k to $440k, three bed. Three nights on the same home. That is a shortlist, not a browse.</b>
         </div>
-        <div class="thread-foot">Illustrative thread. The flow, the pacing rule, the message split and the closing question are all as built.</div>
       </div>
 
-      <div class="reveal">
-        <h3 style="font-size:20px;margin-bottom:14px">Why each of those is deliberate</h3>
-
-        <div class="callout" style="margin-top:0">
-          <strong>The first message says who and why</strong>
-          <p>A client read an early version and said it had &ldquo;no context&rdquo;. He was right. Nothing in the prompt had ever required a message to make sense to somebody who does not remember us. Now every message names the sender, the reason it is arriving, and asks one thing.</p>
-        </div>
-
-        <div class="callout">
-          <strong>The reply waits 25 to 35 seconds</strong>
-          <p>The same client wrote: <em>&ldquo;Speed in which the AI responds via text. Its so fast it can feel bot like.&rdquo;</em> The pause is measured from the lead&rsquo;s message rather than added after drafting, so every reply lands in the same window no matter how fast the model was.</p>
-        </div>
-
-        <div class="callout">
-          <strong>The link is its own message</strong>
-          <p>A long search URL stacked onto prose pushes the message across several SMS segments. Handsets reassemble that badly and the one part with a job stops being clickable. So the prose lands first, then the link.</p>
-        </div>
-
-        <div class="callout">
-          <strong>It asks before it decides</strong>
-          <p>Sending listings without asking is the AI deciding for the lead that they did not want a person. So it asks once. Yes routes to an agent. No gets the listings and a soft landing. Silence gets the listings anyway after 90 minutes, because a lead left holding a question is worse than either.</p>
-        </div>
+      <div class="im-thread">
+        <div class="im-cap">What went out at 9:46 PM</div>
+        <div class="im-msg out" data-i="5">You keep coming back to 18 Cooper Run. Two more like it came up today, both three bed in Cherry Hill under $440k. Want them?</div>
+        <div class="im-msg in" data-i="6">yes please. any chance I could see the first one saturday?</div>
+        <div class="im-won" data-i="7">Showing requested. Cherry Hill agent notified.</div>
       </div>
     </div>
+
+    <div class="im-claim">
+      <b>2.4x</b>
+      <span>Follow up built from what a lead actually viewed converts better than the generic listing blast every other AI sends. Roughly 2.4 times better.</span>
+    </div>
+
+    <ul class="points">
+      <li><b>It knows a shortlist from a browse.</b> One click is noise. The same home three nights running is a buyer talking themselves into an offer.</li>
+      <li><b>It follows up in their criteria, not yours.</b> The area, price band and beds they keep returning to, not the listings you wanted to push.</li>
+      <li><b>It watches the quiet ones.</b> Somebody who went cold in March and started opening listings again last night gets worked tonight.</li>
+    </ul>
   </div>
 </section>
 
 <!-- ============ WHAT WE BUILD ============ -->
-<section class="section" id="build">
+<section class="section soft" id="build">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">Scope</div>
-      <h2>Six things get built. Which of them you need is decided on the call, not by a plan tier.</h2>
-      <p>There is no seat package. What gets built depends on where your leads come from, how many territories have to be respected, and how much your agents will tolerate before they quietly stop using it.</p>
+    <div class="section-head">
+      <div class="kicker">What we build</div>
+      <h2>One layer, working every lead in the account.</h2>
     </div>
-
     <div class="grid-3">
       <article class="card reveal">
-        <span class="num">01</span>
+        <h3>Intent Match</h3>
+        <p>Listings matched to what each lead actually opened, and the quiet ones who started looking again get worked the same night.</p>
+      </article>
+      <article class="card reveal">
+        <h3>AI texting</h3>
+        <p>Instant first reply, then a real follow up cadence that runs for as long as it takes.</p>
+      </article>
+      <article class="card reveal">
         <h3>AI calling</h3>
-        <p>It dials new leads and picks up when they call back. Voicemail gets classified as voicemail. Nothing is logged as a conversation with a human unless a human actually talked, and every call that connects drops a recording, a transcript and an outcome onto the record.</p>
-        <div class="pill-row"><span class="pill">Speed to lead</span><span class="pill">Missed call recovery</span></div>
+        <p>Outbound calls on new leads and old ones, with voicemail handling and retries.</p>
       </article>
       <article class="card reveal">
-        <span class="num coral">02</span>
-        <h3>Two way texting</h3>
-        <p>A real conversation that survives a lead going quiet for four days and picking it back up. Paced so it does not read as a machine. Every message visible inside Follow Up Boss.</p>
-        <div class="pill-row"><span class="pill">Long nurture</span><span class="pill">Opt out handling</span></div>
+        <h3>Qualification write-back</h3>
+        <p>Area, budget, beds, timeline and motivation captured into your Follow Up Boss fields.</p>
       </article>
       <article class="card reveal">
-        <span class="num violet">03</span>
-        <h3>Qualification and write back</h3>
-        <p>Your questions, asked across both channels so the lead is never asked twice. Answers land in the custom fields you already have, so the rest of your stack can read them.</p>
-        <div class="pill-row"><span class="pill">Buyer</span><span class="pill">Seller</span><span class="pill">Distressed</span></div>
-      </article>
-      <article class="card reveal">
-        <span class="num green">04</span>
         <h3>Routing and live transfer</h3>
-        <p>Owners, groups, ponds, territories and contested towns respected as rules. Ring a whole territory group at once and assign whoever answers first.</p>
-        <div class="pill-row"><span class="pill">Territory rules</span><span class="pill">First to answer wins</span></div>
+        <p>Ring the right agent by territory or queue, then bridge the call while the lead is still on.</p>
       </article>
       <article class="card reveal">
-        <span class="num">05</span>
-        <h3>Database reactivation</h3>
-        <p>Your dead pile, worked on a schedule you sign off on. Which contacts are eligible gets settled before anything sends, because consent, your brokerage policy and the carrier rules all have opinions about a two year old lead that they do not have about this morning&rsquo;s.</p>
-        <div class="pill-row"><span class="pill">Aged leads</span><span class="pill">Suppression lists</span></div>
-      </article>
-      <article class="card reveal">
-        <span class="num coral">06</span>
-        <h3>Booking and operator control</h3>
-        <p>Appointments written against agent availability in the CRM calendar, with a one word veto by text. Plus the controls that matter: per contact activation, a global stop, and a log of what fired and why.</p>
-        <div class="pill-row"><span class="pill">Calendar aware</span><span class="pill">Kill switch</span></div>
+        <h3>Controls and audit trail</h3>
+        <p>Per contact on and off by tag, a global stop, and every message on the record.</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ CASE STUDY ============ -->
-<section class="section deep dark" id="proof">
+<!-- ============ COMPARISON ============ -->
+<section class="section" id="compare">
   <div class="container">
-    <div class="section-head reveal">
+    <div class="section-head">
+      <div class="kicker">Compare</div>
+      <h2>Rent it forever, or own it once.</h2>
+      <p>The closest thing to this off the shelf is Structurely's Company plan.</p>
+    </div>
+    <div class="cmp">
+      <div class="cmp-card reveal">
+        <div class="cmp-head"><b>Structurely, Company</b><small>Published plan, as of August 2026</small></div>
+        <div class="cmp-row"><small>Monthly fee</small><span>$999 a month</span></div>
+        <div class="cmp-row"><small>Setup</small><span>$2,500 onboarding, on top</span></div>
+        <div class="cmp-row"><small>Every time your lead replies</small><span>It bills a credit</span></div>
+        <div class="cmp-row"><small>Contract</small><span>Annual</span></div>
+        <div class="cmp-row"><small>Who owns it</small><span>The vendor</span></div>
+      </div>
+      <div class="cmp-card ours reveal">
+        <div class="cmp-head"><b>This build</b><small>One implementation, then it is yours</small></div>
+        <div class="cmp-row"><small>Monthly fee</small><span>None after the build</span></div>
+        <div class="cmp-row"><small>Setup</small><span>The build itself, from $2,500</span></div>
+        <div class="cmp-row"><small>Every time your lead replies</small><span>A fraction of a cent, to your carrier</span></div>
+        <div class="cmp-row"><small>Contract</small><span>None, it is a build</span></div>
+        <div class="cmp-row"><small>Who owns it</small><span>You, on your own accounts</span></div>
+      </div>
+    </div>
+    <p class="cmp-note">Structurely figures are their published Company plan as of August 2026 and may change. Compared on commercial model only. Not affiliated with Structurely.</p>
+  </div>
+</section>
+
+<!-- ============ PROOF ============ -->
+<section class="section soft" id="proof">
+  <div class="container">
+    <div class="section-head">
       <div class="kicker">Proof</div>
-      <h2>Prime Realty Partners: eight agents, 3,272 live contacts, and a CRM we were not allowed to break.</h2>
-      <p>A South Jersey brokerage running Follow Up Boss, with leads arriving from paid social and their own IDX site. They were evaluating a replacement for the AI tool already assigned to their warm leads. Their agents were working real deals in that account the entire time we built.</p>
+      <h2>A real team, a real build, and the whole record open.</h2>
+      <p>Prime Realty Partners run eight agents across three South Jersey territories on a Follow Up Boss account holding 3,272 contacts. Here is exactly what got built and how it was signed off.</p>
     </div>
 
-    <div class="stat-row reveal">
-      <div class="stat"><strong>2.4s</strong><small>From CRM webhook to intro text delivered</small></div>
-      <div class="stat"><strong>8</strong><small>Agents across three territory groups</small></div>
-      <div class="stat"><strong>84s</strong><small>The live transfer call, bridged and claimed</small></div>
-      <div class="stat"><strong>0</strong><small>Mirror failures across the acceptance run</small></div>
-    </div>
-
-    <div class="evidence reveal" style="background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)">
-      <div class="ev-row" style="border-color:rgba(255,255,255,.09)">
-        <div class="ev-top"><b>New lead, first touch</b><span class="status pass">Acceptance test</span></div>
-        <p style="color:#a9b3c7">The CRM webhook fired and the introduction text was sent 2.4 seconds later. Speed to lead was the number this client measured us on.</p>
+    <div class="casefeat reveal">
+      <div>
+        <div class="kicker">Case study, Prime Realty Partners</div>
+        <h3>Eleven acceptance scenarios. Signed off before a single real lead was in scope.</h3>
+        <p>Broker Tim Bowen ran a sharper acceptance test than most vendors run on themselves. Live transfer end to end, voicemail handling, territory routing, opt outs, the whole failure path. The build log is public, including every defect we caught and closed on a test contact first.</p>
+        <p class="mt-30"><a class="button ghost large" href="case-studies/timothy-fub-implementation/">Read the full build, start to finish</a></p>
       </div>
-      <div class="ev-row" style="border-color:rgba(255,255,255,.09)">
-        <div class="ev-top"><b>Call to voicemail, then recovery</b><span class="status pass">Acceptance test</span></div>
-        <p style="color:#a9b3c7">The AI call reached voicemail. It was correctly identified as voicemail rather than a conversation, and the follow up continued by text instead of dialling again.</p>
-      </div>
-      <div class="ev-row" style="border-color:rgba(255,255,255,.09)">
-        <div class="ev-top"><b>Qualification into the CRM</b><span class="status pass">Acceptance test</span></div>
-        <p style="color:#a9b3c7">One inbound reply produced four qualification facts: area, budget, must haves and timeline. The property search link resolved the town named into a three ZIP band with a $340k to $440k range.</p>
-      </div>
-      <div class="ev-row" style="border-color:rgba(255,255,255,.09)">
-        <div class="ev-top"><b>Live transfer, end to end</b><span class="status pass">Acceptance test</span></div>
-        <p style="color:#a9b3c7">The lead asked for an agent mid call. The territory group rang, an agent pressed one to claim it, the call bridged, and an 84 second conversation landed on the record with transcript, recording, assignment and funnel status. Post call analysis then correctly declined to ring anybody a second time.</p>
-      </div>
-      <div class="ev-row" style="border-color:rgba(255,255,255,.09)">
-        <div class="ev-top"><b>A real lead arrived mid build</b><span class="status pass">Acceptance test</span></div>
-        <p style="color:#a9b3c7">A genuine inbound lead from their live source landed while we were still building. The system ingested it, logged it, and sent nothing and wrote nothing, because the activation tag was absent. That is the safety model working unattended on a real person, with nobody watching. We found it in the log afterwards.</p>
-      </div>
-      <div class="ev-row" style="border-color:rgba(255,255,255,.09)">
-        <div class="ev-top"><b>Appointment booking</b><span class="status open">Caveat, stated</span></div>
-        <p style="color:#a9b3c7">Booking runs against the CRM calendar. If a team keeps its real diary in Google and never syncs it, the conflict check will believe agents are free when they are not. The agent veto by text is the backstop, and we told the client this rather than letting them find it.</p>
-      </div>
-      <div class="ev-row" style="border-color:rgba(255,255,255,.09)">
-        <div class="ev-top"><b>Single thread group text</b><span class="status open">Not delivered</span></div>
-        <p style="color:#a9b3c7">The client asked for an introduction text with the agent and the lead in one thread. The carrier rejects the group message outright, so what actually happens is a matched pair of texts in two threads. It works, but it is not what was asked for, and it is on this page for that reason.</p>
-      </div>
-    </div>
-
-    <div class="quote reveal">
-      <blockquote>&ldquo;The AI owns the lead until the lead is ready to speak to an agent or see a property. Handoff happens at that moment, not before.&rdquo;</blockquote>
-      <cite>Tim Bowen, Broker, Prime Realty Partners. His rule, which became ours.</cite>
-    </div>
-
-    <div class="callout note reveal" style="background:rgba(49,86,245,.14);border-color:rgba(49,86,245,.3);border-left-color:#8fa4ff">
-      <strong style="color:#fff">What this case study does not claim</strong>
-      <p style="color:#a9b3c7">No appointments booked, deals closed, revenue or conversion lift. Those numbers are not verified for this client yet, so they are not on this page. Every vendor in this category will show you a conversion chart. We would rather show you the acceptance record and let you judge the engineering.</p>
-    </div>
-
-    <div class="actions reveal">
-      <a class="button ghost large" href="case-studies/timothy-fub-implementation/">Read the full build log</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ WHAT WENT WRONG ============ -->
-<section class="section deep" id="honest">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">The part nobody shows you</div>
-      <h2>Five things this system got wrong before a single real lead saw it.</h2>
-      <p>Most of these were found by the client himself, running his own scenarios against a test contact he created, which is exactly what acceptance testing is supposed to look like. All of them were fixed before any real lead was in scope. We publish them because a defect list is the only honest way to show what an implementation actually involves, and because the vendor who tells you nothing ever goes wrong is the one to worry about.</p>
-    </div>
-
-    <div class="defect reveal">
-      <b>The AI invented an answer from its own voicemail</b>
-      <p>On an unanswered call the transcript is the machine greeting plus our own message. The post call analysis read our words back as the lead&rsquo;s answer, decided they had told us their area, and wrote it onto the contact record. Worse than the wrong data: a question that reads as answered is never asked again.</p>
-      <span class="fix">Fixed by merging facts only from a call that actually connected, and by teaching the analysis that the agent&rsquo;s own words are never evidence.</span>
-    </div>
-
-    <div class="defect reveal">
-      <b>A brush off was logged as an interested lead</b>
-      <p>A 22 second call whose entire content was &ldquo;is now an ok time?&rdquo; and &ldquo;not really&rdquo; was written to the CRM with the outcome Interested. That is the field agents filter on to decide who to ring back, so the damage lands on a human wasting an afternoon.</p>
-      <span class="fix">Fixed by requiring evidence of interest before that outcome can be written. Bad timing now has its own signal.</span>
-    </div>
-
-    <div class="defect reveal">
-      <b>&ldquo;Now is not a good time&rdquo; was recorded as refusing an agent</b>
-      <p>The lead got a tag and a note saying they had turned down a live transfer they were never offered, plus the never offer an agent again path. Bad timing is the most common answer an unscheduled call gets, so this was mislabelling the majority of first calls.</p>
-      <span class="fix">Fixed with a separate bad timing signal that writes no tag, claims no refusal, and leaves the door open.</span>
-    </div>
-
-    <div class="defect reveal">
-      <b>One lead got the same introduction text three times in 1.7 seconds</b>
-      <p>Two schedulers raced each other. The step was marked done after the send rather than before it, so it sat marked pending for the few seconds the draft took, and the second scheduler picked it up and ran it again.</p>
-      <span class="fix">Fixed by claiming the step before anything else can touch it. The copy checker had actually flagged the duplicates and sent anyway, which is the right behaviour and no substitute for fixing the race.</span>
-    </div>
-
-    <div class="defect reveal">
-      <b>A search link built from nothing</b>
-      <p>A lead who had answered no questions received a property link that resolved to eight ZIP codes across three counties, no price, no property type. The client&rsquo;s own words were &ldquo;a link to properties with not much context&rdquo;. A link to everything is worse than no link.</p>
-      <span class="fix">Fixed so no link goes out unless the lead actually named an area, and so the message asks the one question that would let us keep the promise.</span>
-    </div>
-
-    <div class="callout reveal">
-      <strong>Why this section exists</strong>
-      <p>Every item above was caught on a test contact, not by a seller. That is the whole argument for a scoped implementation over a switch you flip on a Tuesday. You are not really buying software here. You are buying the part where somebody breaks it on purpose first, and tells you what they found.</p>
-    </div>
-
-    <div class="callout note reveal">
-      <strong>Bring us the one that worries you</strong>
-      <p>Every team has a scenario they know would go wrong. The lead who replies at midnight, the seller in a town two agents both claim, the one who says &ldquo;stop texting me&rdquo; in a way no filter catches. Bring it to the call and we will tell you how it would be handled, or that we cannot handle it.</p>
-      <div class="actions">
-        <a class="button primary large" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Ask what would break in your setup</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ COMPLIANCE / CONTROL ============ -->
-<section class="section soft">
-  <div class="container split">
-    <div class="section-head reveal">
-      <div class="kicker">Control</div>
-      <h2>8am to 9pm, a tag your staff can pull mid sequence, and a log of everything that got blocked.</h2>
-      <p>Point an AI at a few thousand phone numbers and you have taken on a compliance problem, whether or not you were thinking of it that way. These are built in, because the ones you have to remember to switch on are the ones that get missed.</p>
-      <ul class="check-list">
-        <li><b>An 8am to 9pm contact window</b> in the lead&rsquo;s own local time, matching the federal calling window for telephone solicitations. A step that comes due outside it is deferred to the next opening, never cancelled and never fired late.</li>
-        <li><b>Per contact activation is a tag in Follow Up Boss.</b> Remove it and the AI stops on that lead immediately, mid sequence. The tag is re read before every single outbound action, so a missed webhook can never cause a text to somebody who was deliberately switched off.</li>
-        <li><b>A global stop</b> that halts conversations already in flight, not just new ones.</li>
-        <li><b>Opt outs and suppression lists</b> applied across both channels, with the reply processed on receipt.</li>
-        <li><b>An event log</b> of what fired, what was blocked, and why, so a disputed message has an answer.</li>
+      <ul class="casefeat-facts">
+        <li><b>2.4 seconds</b><span>From the lead hitting Follow Up Boss to the first text going out</span></li>
+        <li><b>3,272 contacts</b><span>Nothing migrated, nothing exported, nothing broken</span></li>
+        <li><b>Zero</b><span>Write-back failures across the acceptance run</span></li>
       </ul>
     </div>
 
-    <div class="reveal">
-      <div class="callout warn" style="margin-top:0">
-        <strong>The consequence we tell clients before they find it</strong>
-        <p>A contact window means a lead arriving at 11pm gets their first message at 8am. Speed to lead on overnight arrivals is therefore hours, by design, and it will show up in your reporting. That is the rule we build to, and you should hear it from us instead of noticing it in a dashboard six weeks in.</p>
-      </div>
-      <div class="callout">
-        <strong>Your accounts, your keys, your data</strong>
-        <p>The telephony account, the messaging registration, the model provider and the hosting are all registered to you. We build inside them. If you fire us tomorrow, nothing switches off and nothing has to be exported, because there is nowhere for it to be exported from.</p>
-      </div>
-      <div class="callout">
-        <strong>We are not a law firm</strong>
-        <p>Messaging rules vary by state and by brokerage, and aged or purchased lists carry rules that new inbound leads do not. We build to the federal baseline and to the policy you give us, and we will tell you plainly when something needs your broker or your counsel rather than us.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TESTIMONIALS ============ -->
-<section class="section">
-  <div class="container">
-    <div class="section-head center reveal">
-      <div class="kicker">Clients, on camera</div>
-      <h2>Two clients on camera. Neither one runs Follow Up Boss, so read them accordingly.</h2>
-      <p>Neither of these runs Follow Up Boss, so we are not going to pretend they do. Same underlying AI, different CRM, different build. What they say about their own results is their account, not a number we have verified, and none of it is claimed for the build further down.</p>
-    </div>
-
+    <h3 class="proof-sub">And two agents running the same engine, on camera.</h3>
     <div class="videos">
       <article class="video-card reveal">
-        <div class="video-wrap" data-video role="button" tabindex="0" aria-label="Play the Ron Jones testimonial">
-          <video muted playsinline preload="none" poster="img/ron-testimonial-poster.jpg"
+        <div class="video-wrap" data-video role="button" tabindex="0" aria-label="Play the testimonial from Ron Jones">
+          <video preload="none" playsinline muted poster="img/ron-testimonial-poster.jpg"
                  src="https://assets.cdn.filesafe.space/qmXJdLQTCzANbI5LCD8t/media/6a31748bc87bd94b12256f6f.mp4"></video>
           <div class="video-overlay"><span class="play"></span></div>
-          <div class="video-badge"><i></i>Real client &middot; 1:34</div>
-          <div class="video-name"><b>Ron Jones</b><small>Real estate, Twin Falls, Idaho</small></div>
         </div>
         <div class="video-copy">
-          <blockquote>&ldquo;She has set appointments for me. I highly recommend Vocalxlabs because it lets us agents spend our time where we create the most ROI.&rdquo;</blockquote>
-          <p>Ron trained the AI on his own team&rsquo;s scripts and values, and listens back to the recorded conversations whenever he wants to check how one went.</p>
+          <blockquote>"She has set appointments for me. I highly recommend Vocalxlabs because it lets us agents spend our time where we create the most ROI."</blockquote>
+          <cite><b>Ron Jones</b>Real estate, Twin Falls, Idaho</cite>
         </div>
       </article>
-
       <article class="video-card reveal">
-        <div class="video-wrap" data-video role="button" tabindex="0" aria-label="Play the Michael testimonial">
-          <video muted playsinline preload="none" poster="img/michael-testimonial-poster.jpg"
+        <div class="video-wrap" data-video role="button" tabindex="0" aria-label="Play the testimonial from Michael">
+          <video preload="none" playsinline muted poster="img/michael-testimonial-poster.jpg"
                  src="https://assets.cdn.filesafe.space/qmXJdLQTCzANbI5LCD8t/media/6a3174bd602476018d59400d.mp4"></video>
           <div class="video-overlay"><span class="play"></span></div>
-          <div class="video-badge"><i></i>Real client &middot; 1:33</div>
-          <div class="video-name"><b>Michael</b><small>Real estate agent, Los Angeles</small></div>
         </div>
         <div class="video-copy">
-          <blockquote>&ldquo;I thought, &lsquo;not another AI tool.&rsquo; But it even revived a two month old lead I&rsquo;d completely written off, and I closed that deal.&rdquo;</blockquote>
-          <p>Michael was openly skeptical until he watched it work. In his words the conversations did not read as automated to his sellers, and it gives him back seven to eight hours a week.</p>
+          <blockquote>"I thought, not another AI tool. But it even revived a two month old lead I'd completely written off, and I closed that deal."</blockquote>
+          <cite><b>Michael</b>Real estate agent, Los Angeles</cite>
         </div>
       </article>
     </div>
-    <p class="fine" style="margin-top:14px">Tap either clip to play with sound.</p>
   </div>
 </section>
 
-<!-- ============ PRICING / OWNERSHIP MATH ============ -->
-<section class="section deep soft" id="pricing">
+<!-- ============ OFFER ============ -->
+<section class="section" id="pricing">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">What it costs</div>
-      <h2>From $2,500, once. Then you pay your vendors instead of paying us.</h2>
-      <p>The number moves with scope. A texting only build on one lead source is not the same job as voice, territory routing, live transfer and reactivation across eight agents. What does not move is the shape: you pay for the build, and the running cost is raw usage on accounts with your name on them.</p>
+    <div class="section-head">
+      <div class="kicker">Pricing</div>
+      <h2>One build. Then the bills come to you, not to us.</h2>
     </div>
-
-    <div class="price-card reveal">
+    <div class="offer reveal">
       <div>
-        <div class="label">Implementation</div>
-        <div class="amount">From $2,500 <span>one time</span></div>
-        <p>Scoped on the teardown call against your lead volume, territories and handoff rules. No seats, no per lead pricing, no annual contract.</p>
-        <div class="actions">
-          <a class="button primary large block" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Get my scope and my map, 15 minutes</a>
-        </div>
+        <div class="amount">From $2,500<small> one time</small></div>
+        <p>You run it on your own telephony, model and hosting accounts, and you pay those directly. There is no platform fee from us once it ships.</p>
       </div>
-      <div>
-        <ul class="check-list" style="margin-top:0">
-          <li>Discovery of your actual lead flow, routing rules and scripts, written down</li>
-          <li>The build, on your own telephony, model and hosting accounts</li>
-          <li>Messaging registration and number setup handled with you</li>
-          <li>Acceptance testing against your real scenarios before a lead sees it</li>
-          <li>Configuration documentation and an operational handover</li>
-          <li>A private channel straight to the people who built it, not a ticket queue</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="split" style="margin-top:38px">
-      <div class="section-head reveal">
-        <div class="kicker">Directional, not a quote</div>
-        <h2 style="font-size:clamp(24px,5.4vw,32px)">Put your own numbers in. Ours default to $999 a month against roughly $180.</h2>
-        <p>Put in what you currently pay a platform each month and a sensible estimate of what the same volume costs at carrier and model rates. Your Follow Up Boss bill is excluded, because you keep paying it either way.</p>
-        <p class="fine" style="margin-top:14px">This is arithmetic you control, not a promise from us. Real usage depends on how many calls you place and how long your conversations run.</p>
-      </div>
-      <div class="calculator reveal">
-        <div>
-          <div class="form-field">
-            <label for="monthly-spend">What you pay a platform now, per month</label>
-            <input id="monthly-spend" type="number" inputmode="numeric" value="999" min="0" step="1">
-          </div>
-          <div class="form-field">
-            <label for="raw-usage">Estimated raw usage on your own accounts</label>
-            <input id="raw-usage" type="number" inputmode="numeric" value="180" min="0" step="1">
-          </div>
-        </div>
-        <div class="calc-result">
-          <small>Difference per month</small>
-          <strong id="monthly-save">$819</strong>
-          <small>Difference over a year</small>
-          <strong id="annual-save">$9,828</strong>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ AFTER HANDOVER ============ -->
-<section class="section soft">
-  <div class="container split">
-    <div class="section-head reveal">
-      <div class="kicker">After handover</div>
-      <h2>The obvious question about owning it: who fixes it in month six?</h2>
-      <p>Worth answering plainly, because &ldquo;no monthly fee&rdquo; can just as easily read as &ldquo;you are on your own&rdquo;. Two things are true at the same time, and you should weigh both.</p>
       <ul class="check-list">
-        <li><b>Nothing switches off if we stop talking.</b> The system runs on accounts in your name. There is no licence to lapse and no server of ours to turn off.</li>
-        <li><b>The platforms underneath it do change.</b> Follow Up Boss ships API changes. Carriers change registration rules. Model providers deprecate versions. That is real and it does not stop because the build is finished.</li>
+        <li>Discovery, plus a written map of your lead flow</li>
+        <li>The full system live inside your Follow Up Boss</li>
+        <li>Accounts, keys and documentation in your name</li>
+        <li>Scenario testing before it touches a real lead</li>
       </ul>
     </div>
-    <div class="reveal">
-      <div class="callout note" style="margin-top:0">
-        <strong>So there is an optional retainer</strong>
-        <p>For teams who want somebody watching those platforms and handling it when one of them moves, we quote a monthly retainer on the call. It is optional, it is not required for the system to keep running, and it is priced against your setup rather than listed here as a number that would be wrong for most people.</p>
-      </div>
-      <div class="callout">
-        <strong>Or hand it to your own developer</strong>
-        <p>The configuration and documentation are written so somebody else can pick it up. Plenty of teams at this size already have a technical person. If that is you, take it in house and pay us nothing.</p>
-      </div>
-      <div class="callout warn">
-        <strong>What we will not do</strong>
-        <p>Promise you a response time we cannot hold, or pretend a one time build never needs attention again. If a vendor tells you their AI stack is finished forever, they have not run one against a carrier for very long.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ NOT FOR YOU ============ -->
-<section class="section">
-  <div class="container split">
-    <div class="section-head reveal">
-      <div class="kicker">Fit</div>
-      <h2>This is the wrong purchase for a lot of teams. Probably worth knowing which.</h2>
-      <p>A subscription costs you a card on file. This costs you meetings. Somebody on your side has to sit down and answer what happens when a lead comes in on a Sunday in a town two agents both cover. After that it costs nothing to keep. If you cannot spare the meetings, buy the subscription.</p>
-    </div>
-    <div class="reveal">
-      <div class="callout" style="margin-top:0">
-        <strong>Say no if</strong>
-        <ul class="x-list" style="margin-top:14px">
-          <li>You want to be live this week. Discovery, build and acceptance testing take longer than switching on a SaaS trial.</li>
-          <li>Nobody on your side can answer questions about routing rules and scripts. Those answers are the product.</li>
-          <li>You are looking for lead generation. This works the leads you already have and does not create new ones.</li>
-          <li>Your volume is a handful of leads a month. Raw usage will be cheap, but the build will not pay for itself quickly.</li>
-          <li>You want a vendor to own it so there is somebody to blame when it breaks. There will not be. The telephony account is in your name and the invoice comes to you.</li>
-        </ul>
-      </div>
-      <div class="callout note">
-        <strong>Say yes if</strong>
-        <ul class="check-list" style="margin-top:14px">
-          <li>Follow Up Boss is staying, and your agents are never moving off it.</li>
-          <li>You have real routing rules, territories or ponds that a template cannot express.</li>
-          <li>You have a database worth reactivating and nobody with time to work it.</li>
-          <li>You would rather pay once and own it than pay monthly and rent it.</li>
-        </ul>
-      </div>
-    </div>
+    <p class="cmp-note">Teams that want ongoing changes and monitoring can add an optional retainer. Most do not need one on day one.</p>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="section close soft" id="faq">
+<section class="section soft" id="faq">
   <div class="container">
-    <div class="section-head reveal">
-      <div class="kicker">Before you book</div>
-      <h2>Nine questions we get asked on every one of these calls.</h2>
+    <div class="section-head">
+      <div class="kicker">FAQ</div>
+      <h2>The questions we get on every call.</h2>
     </div>
-    <div class="faq reveal">
-      <details open>
-        <summary>How is this different from Follow Up Boss Smart Messages and Action Plans?</summary>
-        <p>As they work today, Smart Messages help an agent draft a reply faster, and Action Plans organise sequences, tasks, emails, tags and stages. Both still need a human in the loop at the moment a lead replies. This adds an autonomous layer that calls or texts, holds the conversation, captures qualification, keeps following up over weeks, and writes the result back into Follow Up Boss before a person is involved.</p>
-      </details>
+    <div class="faq">
       <details>
         <summary>Will my agents have to learn another tool?</summary>
-        <p>No, and that is the main design constraint. Agents stay in Follow Up Boss. Conversations, summaries, qualification fields, notes, tags and assignment all land on the person record they already open. Turning the AI on or off for one contact is a tag they apply in the CRM. The only separate screen is an operator dashboard for whoever holds the global controls, and most agents never see it.</p>
+        <p>No. Conversations, summaries, fields, notes and assignment all land on the Follow Up Boss person record they already open. Turning the AI off for one contact is a tag they apply in the CRM.</p>
       </details>
       <details>
-        <summary>What does it actually cost to run each month?</summary>
-        <p>You pay your own vendors directly: the carrier for messages and call minutes, the model provider for the AI, and a small hosting bill. There is no platform fee from us. What that totals depends entirely on your volume and how much of it is voice, because calls cost meaningfully more than texts. We size it with you on the call rather than quoting a number that would be wrong.</p>
+        <summary>What does it cost to run each month?</summary>
+        <p>You pay your carrier for messages and minutes, your model provider for the AI, and a small hosting bill. All of it direct, none of it to us. Volume decides the number, and we size it with you on the call.</p>
       </details>
       <details>
-        <summary>Do we have to replace our Follow Up Boss phone number?</summary>
-        <p>Usually not. Messaging and voice are mapped around your current setup, and any number porting requirement is identified during discovery rather than sprung on you after the build. What does need doing is proper messaging registration for the sending number, which we handle with you.</p>
+        <summary>Do we have to change our phone number?</summary>
+        <p>Usually not. Messaging and voice get mapped around your current setup, and anything that needs porting comes up in discovery rather than after the build. Carrier registration for the sending number we handle with you.</p>
       </details>
       <details>
-        <summary>Can it work aged or imported leads?</summary>
-        <p>Yes, where consent, brokerage policy, carrier rules, suppression lists and opt outs permit it. Aged and purchased lists carry obligations that fresh inbound leads do not, so eligible segments get defined and approved before anything sends. This is the part of a reactivation project that takes the longest and it is not the part to rush.</p>
+        <summary>What if it says something wrong to a lead?</summary>
+        <p>Remove the tag on that contact and it stops mid conversation, and a human takes over. There is a global stop for everything already in flight. Every message and call is on the record with a timestamp, so you can read exactly what was said.</p>
       </details>
       <details>
-        <summary>How long does an implementation take?</summary>
-        <p>Discovery is quick, usually a call and a follow up. The build depends on scope, and acceptance testing depends on how fast your side can run scenarios with us. A texting only build on one lead source is a short project. Voice, territory routing, live transfer and reactivation across a full roster is not. We give you a real date after discovery, not before.</p>
+        <summary>How does it know what a lead looked at?</summary>
+        <p>Your site already logs it and Follow Up Boss already stores it: which listings a person opened, when, and how many separate days they came back. We read that alongside the criteria they gave us in conversation, and match new listings against both.</p>
+        <p>It is also what wakes an aged lead up. Somebody who went quiet in March and started opening listings again last night gets worked tonight, where consent, brokerage policy, carrier rules and opt outs permit. Eligible segments get defined and approved before anything sends.</p>
       </details>
       <details>
-        <summary>What happens if it says something wrong to one of my leads?</summary>
-        <p>You remove the tag on that contact and the AI stops immediately, mid sequence, and a human takes it. For anything wider there is a global stop that halts conversations already in flight. Every message and call is on the record with a timestamp, so you can see exactly what was said rather than reconstructing it. We would rather you had the log than our reassurance.</p>
-      </details>
-      <details>
-        <summary>What happens when something breaks after handover?</summary>
-        <p>Two things are true at once. The system runs on accounts in your name, so nothing switches off if we stop working together. And the platforms underneath it do change: Follow Up Boss ships API changes, carriers change registration rules, model providers deprecate versions.</p>
-        <p>So there is an optional monthly retainer for teams who want us watching that and handling it. We quote it on the call against your actual setup. It is optional, the system does not need it to keep running, and if you would rather your own developer owned it, the configuration and documentation are written so they can.</p>
-      </details>
-      <details>
-        <summary>What exactly do we own at the end?</summary>
-        <p>The accounts, the API keys, the phone number and its registration, the configuration, the documentation, and the conversation data, because all of it lives in systems registered to you. You pay raw telephony, model and hosting costs directly rather than renting our software indefinitely. If you stop working with us, nothing switches off.</p>
-      </details>
-      <details>
-        <summary>Is there a free pilot?</summary>
-        <p>Sometimes. It depends on your lead volume, your CRM setup and whether we think we can prove something meaningful quickly, so it is a conversation on the call rather than a standing offer on a page. What is always free is the teardown itself and the written map of your lead flow that comes out of it.</p>
+        <summary>What happens if we stop working together?</summary>
+        <p>Nothing switches off. The accounts, the number, the keys and the data are all in your name, so the system keeps running and you keep paying your vendors directly.</p>
       </details>
     </div>
   </div>
@@ -802,17 +415,11 @@
   <div class="container">
     <div class="cta-panel reveal">
       <div>
-        <div class="kicker">The Follow Up Boss teardown</div>
-        <h2>Bring your real lead flow. Leave with the map, whether or not you hire us.</h2>
-        <p>Fifteen minutes. Bring the list of where your leads come from and roughly how many a week, and we will draw the flow on a shared screen while you watch. You keep the drawing.</p>
-        <ul class="cta-list">
-          <li>Where leads are going cold in your current setup, specifically</li>
-          <li>What an implementation would scope to, and what it would cost</li>
-          <li>Whether a pilot on your own leads makes sense before you commit</li>
-          <li>An honest answer if the tool you already pay for is the better call</li>
-        </ul>
+        <div class="kicker">Free Follow Up Boss teardown</div>
+        <h2>See your own lead flow on one page.</h2>
+        <p>Fifteen minutes. We walk your sources, your routing and your unworked queues, and you leave with the map whether you hire us or not.</p>
       </div>
-      <a class="button primary large" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Get my Follow Up Boss lead flow mapped</a>
+      <a class="button ghost large" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Book my free teardown call</a>
     </div>
   </div>
 </section>
@@ -823,10 +430,10 @@
   <div class="container footer-grid">
     <div>
       <a class="brand" href="./">
-        <img src="img/logo.png" alt="" width="32" height="32">
-        <span class="brand-copy"><strong>FUB Implementation</strong><small>by VocalX Labs</small></span>
+        <img src="img/logo.png" alt="" width="30" height="30">
+        <span class="brand-copy"><strong>VocalX Labs</strong><small>Follow Up Boss AI</small></span>
       </a>
-      <p class="footer-copy">Custom AI calling, texting, routing and reactivation systems built around Follow Up Boss. Your team stays in the CRM. The accounts are in your name.</p>
+      <p class="footer-copy">AI calling, texting, routing and reactivation built around Follow Up Boss. Your team stays in the CRM. The accounts stay in your name.</p>
     </div>
     <div class="footer-links">
       <strong>System</strong>
@@ -858,7 +465,7 @@
 </footer>
 
 <div class="sticky-cta" data-sticky hidden>
-  <a class="button primary block" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Map my Follow Up Boss lead flow, free</a>
+  <a class="button primary block" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Book my free teardown call</a>
 </div>
 
 <script type="application/ld+json">
@@ -871,7 +478,7 @@
       "name":"Vocalxlabs",
       "alternateName":["Vocal X Labs","VocalX Labs","VOCALXLABS LLC"],
       "url":"https://vocalxlabs.com/",
-      "logo":"https://vocalxlabs.com/fub/img/logo.png",
+      "logo":"https://vocalxlabs.com/img/logo.png",
       "email":"team@vocalxlabs.com",
       "telephone":"+1-708-773-7231",
       "address":{"@type":"PostalAddress","streetAddress":"30 N Gould St Ste R","addressLocality":"Sheridan","addressRegion":"WY","postalCode":"82801","addressCountry":"US"}
@@ -882,21 +489,18 @@
       "provider":{"@id":"https://vocalxlabs.com/#organization"},
       "serviceType":"AI calling, texting, qualification and lead routing implementation for Follow Up Boss",
       "areaServed":"US",
-      "url":"https://vocalxlabs.com/fub/",
-      "offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","minPrice":"2500","priceCurrency":"USD"},"description":"One time implementation, from $2,500. Client pays raw telephony, model and hosting usage on their own accounts."}
+      "url":"https://vocalxlabs.com/",
+      "offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","minPrice":"2500","priceCurrency":"USD"},"description":"One time implementation, from $2,500. The client pays telephony, model and hosting usage directly on their own accounts."}
     },
     {
       "@type":"FAQPage",
       "mainEntity":[
-        {"@type":"Question","name":"How is this different from Follow Up Boss Smart Messages and Action Plans?","acceptedAnswer":{"@type":"Answer","text":"Smart Messages help an agent draft a reply faster, and Action Plans organise sequences, tasks, emails, tags and stages. Both still need a human in the loop at the moment a lead replies. This adds an autonomous layer that calls or texts, holds the conversation, captures qualification, keeps following up over weeks, and writes the result back into Follow Up Boss before a person is involved."}},
-        {"@type":"Question","name":"Will my agents have to learn another tool?","acceptedAnswer":{"@type":"Answer","text":"No, and that is the main design constraint. Agents stay in Follow Up Boss. Conversations, summaries, qualification fields, notes, tags and assignment all land on the person record they already open. Turning the AI on or off for one contact is a tag they apply in the CRM. The only separate screen is an operator dashboard for whoever holds the global controls, and most agents never see it."}},
-        {"@type":"Question","name":"What does it actually cost to run each month?","acceptedAnswer":{"@type":"Answer","text":"You pay your own vendors directly: the carrier for messages and call minutes, the model provider for the AI, and a small hosting bill. There is no platform fee from us. What that totals depends entirely on your volume and how much of it is voice, because calls cost meaningfully more than texts. We size it with you on the call rather than quoting a number that would be wrong."}},
-        {"@type":"Question","name":"Do we have to replace our Follow Up Boss phone number?","acceptedAnswer":{"@type":"Answer","text":"Usually not. Messaging and voice are mapped around your current setup, and any number porting requirement is identified during discovery rather than sprung on you after the build. What does need doing is proper messaging registration for the sending number, which we handle with you."}},
-        {"@type":"Question","name":"Can it work aged or imported leads?","acceptedAnswer":{"@type":"Answer","text":"Yes, where consent, brokerage policy, carrier rules, suppression lists and opt outs permit it. Aged and purchased lists carry obligations that fresh inbound leads do not, so eligible segments get defined and approved before anything sends. This is the part of a reactivation project that takes the longest and it is not the part to rush."}},
-        {"@type":"Question","name":"How long does an implementation take?","acceptedAnswer":{"@type":"Answer","text":"Discovery is quick, usually a call and a follow up. The build depends on scope, and acceptance testing depends on how fast your side can run scenarios with us. A texting only build on one lead source is a short project. Voice, territory routing, live transfer and reactivation across a full roster is not. We give you a real date after discovery, not before."}},
-        {"@type":"Question","name":"What happens if it says something wrong to one of my leads?","acceptedAnswer":{"@type":"Answer","text":"You remove the tag on that contact and the AI stops immediately, mid sequence, and a human takes it. For anything wider there is a global stop that halts conversations already in flight. Every message and call is on the record with a timestamp, so you can see exactly what was said rather than reconstructing it. We would rather you had the log than our reassurance."}},
-        {"@type":"Question","name":"What happens when something breaks after handover?","acceptedAnswer":{"@type":"Answer","text":"Two things are true at once. The system runs on accounts in your name, so nothing switches off if we stop working together. And the platforms underneath it do change: Follow Up Boss ships API changes, carriers change registration rules, model providers deprecate versions."}},{"@type":"Question","name":"What exactly do we own at the end?","acceptedAnswer":{"@type":"Answer","text":"The accounts, the API keys, the phone number and its registration, the configuration, the documentation, and the conversation data, because all of it lives in systems registered to you. You pay raw telephony, model and hosting costs directly rather than renting our software indefinitely. If you stop working with us, nothing switches off."}},
-        {"@type":"Question","name":"Is there a free pilot?","acceptedAnswer":{"@type":"Answer","text":"Sometimes. It depends on your lead volume, your CRM setup and whether we think we can prove something meaningful quickly, so it is a conversation on the call rather than a standing offer on a page. What is always free is the teardown itself and the written map of your lead flow that comes out of it."}}
+        {"@type":"Question","name":"Will my agents have to learn another tool?","acceptedAnswer":{"@type":"Answer","text":"No. Conversations, summaries, fields, notes and assignment all land on the Follow Up Boss person record they already open. Turning the AI off for one contact is a tag they apply in the CRM."}},
+        {"@type":"Question","name":"What does it cost to run each month?","acceptedAnswer":{"@type":"Answer","text":"You pay your carrier for messages and minutes, your model provider for the AI, and a small hosting bill. All of it direct, none of it to us. Volume decides the number, and we size it with you on the call."}},
+        {"@type":"Question","name":"Do we have to change our phone number?","acceptedAnswer":{"@type":"Answer","text":"Usually not. Messaging and voice get mapped around your current setup, and anything that needs porting comes up in discovery rather than after the build. Carrier registration for the sending number we handle with you."}},
+        {"@type":"Question","name":"What if it says something wrong to a lead?","acceptedAnswer":{"@type":"Answer","text":"Remove the tag on that contact and it stops mid conversation, and a human takes over. There is a global stop for everything already in flight. Every message and call is on the record with a timestamp, so you can read exactly what was said."}},
+        {"@type":"Question","name":"How does it know what a lead looked at?","acceptedAnswer":{"@type":"Answer","text":"Your site already logs it and Follow Up Boss already stores it: which listings a person opened, when, and how many separate days they came back. We read that alongside the criteria they gave us in conversation, and match new listings against both. It is also what wakes an aged lead up. Somebody who went quiet in March and started opening listings again last night gets worked tonight, where consent, brokerage policy, carrier rules and opt outs permit."}},
+        {"@type":"Question","name":"What happens if we stop working together?","acceptedAnswer":{"@type":"Answer","text":"Nothing switches off. The accounts, the number, the keys and the data are all in your name, so the system keeps running and you keep paying your vendors directly."}}
       ]
     }
   ]

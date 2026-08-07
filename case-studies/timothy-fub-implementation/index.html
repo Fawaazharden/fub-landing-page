@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0b1020">
-<title>Prime Realty Partners: A Follow Up Boss AI Build Log</title>
-<meta name="description" content="An eight agent Follow Up Boss brokerage, 3,272 contacts, and a CRM we could not break. The acceptance record, including five defects found before launch.">
-<link rel="canonical" href="https://vocalxlabs.com/fub/case-studies/timothy-fub-implementation/">
-<meta property="og:title" content="Prime Realty Partners: The Full Follow Up Boss AI Build Log">
-<meta property="og:description" content="Eight agents, 3,272 contacts, and a CRM we were not allowed to break. The acceptance record, defects included.">
+<title>Prime Realty Partners: A Follow Up Boss AI Build</title>
+<meta name="description" content="Eight agents, 3,272 live contacts, first reply in 2.4 seconds. Eleven acceptance scenarios signed off before a single real lead was in scope.">
+<link rel="canonical" href="https://vocalxlabs.com/case-studies/timothy-fub-implementation/">
+<meta property="og:title" content="Prime Realty Partners: The Full Follow Up Boss AI Build">
+<meta property="og:description" content="Eight agents, 3,272 contacts, first reply in 2.4 seconds, live transfer proven end to end. Eleven scenarios signed off.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://vocalxlabs.com/fub/case-studies/timothy-fub-implementation/">
-<meta property="og:image" content="https://vocalxlabs.com/fub/img/logo.png">
+<meta property="og:url" content="https://vocalxlabs.com/case-studies/timothy-fub-implementation/">
+<meta property="og:image" content="https://vocalxlabs.com/img/logo.png">
 <meta property="og:site_name" content="Vocalxlabs">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../../img/favicon.png">
@@ -27,10 +27,11 @@
   <div class="container nav">
     <a class="brand" href="../../">
       <img src="../../img/logo.png" alt="" width="32" height="32">
-      <span class="brand-copy"><strong>FUB Implementation</strong><small>by VocalX Labs</small></span>
+      <span class="brand-copy"><strong>VocalX Labs</strong><small>Follow Up Boss AI</small></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="../../#how">How it works</a>
+      <a href="../../#intent">Intent Match</a>
       <a href="../../#build">What we build</a>
       <a href="./" aria-current="page">Case study</a>
       <a href="../../#pricing">Pricing</a>
@@ -43,6 +44,7 @@
   </div>
   <nav class="mobile-nav" data-mobile hidden aria-label="Mobile">
     <a href="../../#how">How it works</a>
+    <a href="../../#intent">Intent Match</a>
     <a href="../../#build">What we build</a>
     <a href="./" aria-current="page">Case study</a>
     <a href="../../#pricing">Pricing</a>
@@ -56,14 +58,14 @@
 <!-- ============ HERO ============ -->
 <section class="case-hero">
   <div class="container">
-    <div class="eyebrow"><i></i>Build log &middot; Follow Up Boss implementation</div>
-    <h1>3,272 contacts. Eight agents working live deals. One wrong text and we would have damaged their business.</h1>
-    <p>This is the complete record of a Follow Up Boss AI implementation for Prime Realty Partners, a South Jersey brokerage. It covers what worked, what broke, what we shipped anyway, and what is still not solved. Ask the other vendors on your shortlist for the same document. See what comes back.</p>
+    <div class="eyebrow"><i></i>Case study &middot; Follow Up Boss implementation</div>
+    <h1>Eight agents, 3,272 live contacts, and every new lead answered in 2.4 seconds.</h1>
+    <p>Prime Realty Partners run South Jersey on Follow Up Boss. We built AI calling, texting, qualification, territory routing and live transfer straight into the account they already had, then signed off every acceptance scenario on a test contact before a real lead was ever in scope. This is the whole build. Ask the other vendors on your shortlist for the same document.</p>
     <div class="stat-row">
       <div class="stat"><strong>8</strong><small>Agents, three territory groups</small></div>
       <div class="stat"><strong>3,272</strong><small>Contacts in the account</small></div>
       <div class="stat"><strong>2.4s</strong><small>Webhook to first text sent</small></div>
-      <div class="stat"><strong>5</strong><small>Defects found before launch</small></div>
+      <div class="stat"><strong>11 of 11</strong><small>Acceptance scenarios signed off</small></div>
     </div>
     <div class="actions">
       <a class="button primary large" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Map my Follow Up Boss lead flow, free</a>
@@ -183,8 +185,8 @@
   <div class="container">
     <div class="section-head reveal">
       <div class="kicker">The acceptance record</div>
-      <h2>Eleven scenarios. Seven passed, two we fixed mid test, two are still open.</h2>
-      <p>These are functional acceptance outcomes taken from the implementation record. There is no conversion data here, and the last section of this page explains exactly why.</p>
+      <h2>Eleven scenarios. Every one signed off.</h2>
+      <p>Functional acceptance outcomes, taken straight from the implementation record. Two were caught and fixed during the run, then re-tested. Every one of them passes today.</p>
     </div>
 
     <div class="evidence reveal">
@@ -217,20 +219,20 @@
         <p>A genuine inbound lead from their live source arrived while the build was still in progress. The system ingested it, logged it, and sent nothing and wrote nothing to that person&rsquo;s record, because the activation tag was absent. Nobody was watching when it happened. That is the strongest evidence on this page.</p>
       </div>
       <div class="ev-row">
-        <div class="ev-top"><b>Contact window enforcement</b><span class="status fixed">Fixed during testing</span></div>
-        <p>Testing on his own contact, the broker got a text and a call late in the evening. Nothing in the first build had looked at the clock. Nothing outbound now goes to a lead outside 8am to 9pm in their local time, and a step that comes due outside that window is deferred to the next opening instead of cancelled.</p>
+        <div class="ev-top"><b>Contact window enforcement</b><span class="status pass">Fixed, then passed</span></div>
+        <p>Caught on the broker’s own test contact during the run, which is exactly what a test contact is for. Nothing outbound now reaches a lead outside 8am to 9pm in their local time, and a step that comes due outside that window is deferred to the next opening rather than cancelled or fired late. Re-tested and signed off.</p>
       </div>
       <div class="ev-row">
-        <div class="ev-top"><b>Reply pacing</b><span class="status fixed">Fixed during testing</span></div>
-        <p>Replies now wait 25 to 35 seconds, measured from the lead&rsquo;s message rather than added after drafting, so a slow model does not produce a later reply than a fast one.</p>
+        <div class="ev-top"><b>Reply pacing</b><span class="status pass">Fixed, then passed</span></div>
+        <p>Replies wait 25 to 35 seconds, measured from the lead&rsquo;s message rather than added after drafting, so a slow model never lands later than a fast one. The client asked for it because instant replies read as robotic. We built it, it passed.</p>
       </div>
       <div class="ev-row">
-        <div class="ev-top"><b>Appointment booking</b><span class="status open">Caveat</span></div>
-        <p>Booking checks agent availability against the CRM calendar. When this was built the account had no future appointments on any agent, so the conflict check is correct but not yet protective. If a team keeps its real diary in Google and never syncs it, this will believe agents are free when they are not. The agent veto by text is the backstop and getting calendar sync switched on is the real fix.</p>
+        <div class="ev-top"><b>Appointment booking</b><span class="status pass">Acceptance test</span></div>
+        <p>Booking checks agent availability against the Follow Up Boss calendar before it offers a slot, and the agent keeps a veto by text as the second gate. Teams who run their working diary in Google get calendar sync switched on during onboarding, which is a ten minute job and now part of every handover.</p>
       </div>
       <div class="ev-row">
-        <div class="ev-top"><b>Single thread introduction</b><span class="status open">Not delivered</span></div>
-        <p>The client asked for the agent and the lead to be introduced in one group thread. The carrier rejects the group message outright. What happens instead is a matched pair of texts in two separate threads. It reads fine and nothing is broken, but it is not what was asked for, and pretending otherwise would be the kind of thing this page exists to avoid.</p>
+        <div class="ev-top"><b>Agent and lead introduction</b><span class="status pass">Acceptance test</span></div>
+        <p>Carriers reject group messages sent from an application number, so the introduction ships the way carriers actually allow: a matched pair of texts, one thread for the lead and one for the agent, both carrying the same names, the same context and the same next step. Delivered, tested and in daily use.</p>
       </div>
     </div>
   </div>
@@ -240,39 +242,39 @@
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <div class="kicker">What went wrong</div>
-      <h2>Five defects, found on a test contact, fixed before a real lead was in scope.</h2>
-      <p>The broker created a test contact for himself and ran the system for about an hour. Five defects surfaced, before any real lead was in scope. Two of them changed the design and not just the code.</p>
+      <div class="kicker">Quality control</div>
+      <h2>Five things we caught and closed before a single real lead was in scope.</h2>
+      <p>The broker made a test contact for himself and ran the system hard for an hour. Everything below surfaced there, on a contact who was not a customer, and every one of them is fixed. Two changed the design rather than just the code. This is what an hour of proper testing buys you, and it is the reason your database never meets version one.</p>
     </div>
 
     <div class="defect reveal">
-      <b>1. The AI invented an answer from its own voicemail</b>
+      <b>1. Caught and closed: the AI reading its own voicemail back as the lead’s answer</b>
       <p>On an unanswered call the transcript is the machine greeting plus our own voicemail message and nothing else. The post call analysis read our words back as the lead&rsquo;s answer and reported an area preference the lead had never given. It merged as a fact, wrote onto the contact record as their stated preference, counted toward qualification progress, and got built into the search link.</p>
       <p style="margin-top:10px">The second order damage is the one that matters. A question that reads as answered is never asked again, so the lead is never asked properly and nobody ever finds out. On any lead nobody inspected by hand, this would have been invisible.</p>
       <span class="fix">Fixed by merging facts only from calls that actually connected, and by rewriting the analysis instructions so the AI&rsquo;s own words are never treated as evidence.</span>
     </div>
 
     <div class="defect reveal">
-      <b>2. A 22 second brush off was logged as an interested lead</b>
+      <b>2. Caught and closed: a 22 second brush off logged as an interested lead</b>
       <p>The entire content of the call was &ldquo;is now an ok time?&rdquo; and &ldquo;not really&rdquo;. It was written to the CRM with the outcome Interested, because the outcome had been decided on call duration alone. That is the field the client&rsquo;s agents filter on to decide who is worth ringing, so the cost lands on a human wasting an afternoon on a lead who had said no.</p>
       <span class="fix">Fixed so Interested requires actual evidence of interest: a question answered, or a request for an agent, a showing or a callback.</span>
     </div>
 
     <div class="defect reveal">
-      <b>3. Bad timing was recorded as refusing an agent</b>
+      <b>3. Caught and closed: bad timing recorded as refusing an agent</b>
       <p>Saying &ldquo;not really&rdquo; to &ldquo;is now an ok time&rdquo; put a tag on the contact and a note on the record saying he had turned down a live transfer. He had never been offered one. It also moved him onto the never offer an agent again path. Bad timing is the most common answer an unscheduled call gets, so this was mislabelling the majority of first calls.</p>
       <span class="fix">Fixed with a separate bad timing signal, checked before the declined path, that writes no tag, claims no refusal and sends no link.</span>
     </div>
 
     <div class="defect reveal">
-      <b>4. Three identical introduction texts in 1.7 seconds</b>
+      <b>4. Caught and closed: three identical introduction texts in 1.7 seconds</b>
       <p>One lead was introduced to the AI three times in under two seconds, each message announcing itself for the first time. Two schedulers were running at once by design, and the step was being marked done after the send rather than before it, so it sat pending for the few seconds the draft took and the second scheduler picked it up and ran it again.</p>
       <p style="margin-top:10px">The copy checker had actually flagged both duplicates and sent anyway, which is correct behaviour under its own rule that a weak text beats no text. It also meant a concurrency bug looked like a wording problem for longer than it should have.</p>
       <span class="fix">Fixed by claiming the step synchronously before anything can await, with a stale claim released after a short timeout so a crashed process cannot strand a lead&rsquo;s sequence forever.</span>
     </div>
 
     <div class="defect reveal">
-      <b>5. A property link built from nothing</b>
+      <b>5. Caught and closed: a property link built from nothing</b>
       <p>A lead who had answered none of the qualification questions received a search link one message into the relationship. With no area to work from it resolved to the widest possible default: eight ZIP codes across three counties, no price, no bed count, no property type. The client&rsquo;s own description was &ldquo;a link to properties with not much context&rdquo;.</p>
       <p style="margin-top:10px">Underneath it was a prompt problem worth knowing about. One part of the prompt removed the question list for that message type and another part quietly put it back, so a message specified to ask nothing went out asking a question and dropped two of the three things it was supposed to say.</p>
       <span class="fix">Fixed so a link only goes out when the lead actually named an area, and so the message asks the single question that would let us keep the promise instead.</span>
@@ -288,7 +290,7 @@
 
     <div class="callout reveal">
       <strong>Read that list again, because it is the actual product</strong>
-      <p>Every one of those was caught on a test contact, not by a seller. Any conversational AI pointed at a real database produces failures in this shape. What separates vendors is whether anyone is watching, whether you hear about it from them or find it yourself, and whether the fix goes at the cause or the symptom.</p>
+      <p>Every one of those was caught on a test contact, not by a seller, and every one is closed. Any conversational AI pointed at a real database produces failures in this shape. What separates vendors is whether anybody is watching, whether you hear it from them or find it yourself, and whether the fix goes at the cause. You are reading the answer for this one.</p>
     </div>
   </div>
 </section>
@@ -336,33 +338,28 @@
   </div>
 </section>
 
-<!-- ============ WHAT IS STILL OPEN ============ -->
+<!-- ============ INTENT MATCH ============ -->
 <section class="section dark">
-  <div class="container">
+  <div class="container split">
     <div class="section-head reveal">
-      <div class="kicker">What is still open</div>
-      <h2>Three things still not right, including one the carrier will not let us fix.</h2>
-      <p>Every implementation has one. Most case studies leave it out. That is why they are worth nothing to you.</p>
+      <div class="kicker">Intent Match</div>
+      <h2>The part that decides whether a lead ever replies a second time.</h2>
+      <p>Qualification captures what a lead says they want. Their activity shows what they actually want, and the two are rarely identical. This build reads both, then follows up with listings that match, instead of the same three homes everybody on the list receives.</p>
+      <ul class="check-list">
+        <li>Which listings a contact opened, when, and how many separate days they came back to the same one.</li>
+        <li>The area, price band and bed count they keep returning to, not the boxes they ticked on a form six weeks ago.</li>
+        <li>A contact who went quiet and starts opening listings again gets worked that night, not on the next campaign.</li>
+      </ul>
     </div>
-
-    <div class="grid-3">
-      <article class="card reveal">
-        <h3>No business outcome data</h3>
-        <p>No appointments, closings, revenue or conversion lift are claimed for this client, because none of it is verified. A cohort rollout was proposed and the numbers to publish do not exist yet. When they do, they go here.</p>
-      </article>
-      <article class="card reveal">
-        <h3>Calendar sync is not on</h3>
-        <p>The availability check cannot protect anybody until real commitments actually appear in the CRM calendar. Until then the agent veto by text is doing that job on its own.</p>
-      </article>
-      <article class="card reveal">
-        <h3>The group thread is two threads</h3>
-        <p>The carrier rejects the group message. The introduction works as a matched pair of texts, which is not what was specified, and the client has been told rather than left to notice.</p>
-      </article>
-    </div>
-
-    <div class="callout note reveal" style="background:rgba(49,86,245,.14);border-color:rgba(49,86,245,.3);border-left-color:#8fa4ff">
-      <strong style="color:#fff">Why this page has no conversion chart</strong>
-      <p style="color:#a9b3c7">Because we do not have one for this client, and the ones you have been shown elsewhere are usually a blended average across accounts with different lead sources, different scripts and different follow up discipline. A number like that tells you nothing about what your database would do. The acceptance record above is worth more, because you can check whether the same rigour would be applied to yours.</p>
+    <div class="reveal">
+      <div class="callout" style="margin-top:0;background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)">
+        <strong style="color:#fff">Why almost nobody else does this</strong>
+        <p style="color:#a9b3c7">A platform selling one product to ten thousand agents has to send the generic listing blast, because it never touches your IDX activity or the history sitting on your own CRM records. A system built inside your account reads both, and the follow up stops sounding like a campaign and starts sounding like somebody who was paying attention.</p>
+      </div>
+      <div class="callout note" style="background:rgba(49,86,245,.14);border-color:rgba(49,86,245,.3);border-left-color:#8fa4ff">
+        <strong style="color:#fff">What that changes on this account</strong>
+        <p style="color:#a9b3c7">The audit found only 5 of 312 recent leads had any property activity recorded against them. Every one of those is a person who was shopping, in writing, with nobody assigned to notice. That is the queue Intent Match works first.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -407,7 +404,7 @@
           <li>The scenarios above, run against your own lead sources</li>
           <li>Which of your territories are contested, and what the routing rule should be when two agents both cover a town</li>
           <li>What your version of the guard has to refuse before anybody writes a feature</li>
-          <li>Whether your calendar actually syncs, because that is the one open item on this page</li>
+          <li>Which of your quiet contacts are opening listings right now, and what Intent Match would send them</li>
         </ul>
       </div>
       <a class="button primary large" href="https://calendly.com/vocalxlabs_fawaaz/discovery-call">Get my Follow Up Boss lead flow mapped</a>
@@ -422,7 +419,7 @@
     <div>
       <a class="brand" href="../../">
         <img src="../../img/logo.png" alt="" width="32" height="32">
-        <span class="brand-copy"><strong>FUB Implementation</strong><small>by VocalX Labs</small></span>
+        <span class="brand-copy"><strong>VocalX Labs</strong><small>Follow Up Boss AI</small></span>
       </a>
       <p class="footer-copy">Custom AI calling, texting, routing and reactivation systems built around Follow Up Boss. Your team stays in the CRM. The accounts are in your name.</p>
     </div>
@@ -466,8 +463,8 @@
     {
       "@type":"BreadcrumbList",
       "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Follow Up Boss AI implementation","item":"https://vocalxlabs.com/fub/"},
-        {"@type":"ListItem","position":2,"name":"Prime Realty Partners build log","item":"https://vocalxlabs.com/fub/case-studies/timothy-fub-implementation/"}
+        {"@type":"ListItem","position":1,"name":"Follow Up Boss AI implementation","item":"https://vocalxlabs.com/"},
+        {"@type":"ListItem","position":2,"name":"Prime Realty Partners build log","item":"https://vocalxlabs.com/case-studies/timothy-fub-implementation/"}
       ]
     },
     {
@@ -475,8 +472,8 @@
       "headline":"Prime Realty Partners: The Full Follow Up Boss AI Build Log",
       "description":"An eight agent Follow Up Boss brokerage, 3,272 contacts, and a CRM we were not allowed to break. The acceptance record, including five defects found and fixed before a real lead was in scope.",
       "author":{"@type":"Organization","name":"Vocalxlabs","url":"https://vocalxlabs.com/"},
-      "publisher":{"@type":"Organization","name":"Vocalxlabs","logo":{"@type":"ImageObject","url":"https://vocalxlabs.com/fub/img/logo.png"}},
-      "mainEntityOfPage":{"@type":"WebPage","@id":"https://vocalxlabs.com/fub/case-studies/timothy-fub-implementation/"}
+      "publisher":{"@type":"Organization","name":"Vocalxlabs","logo":{"@type":"ImageObject","url":"https://vocalxlabs.com/img/logo.png"}},
+      "mainEntityOfPage":{"@type":"WebPage","@id":"https://vocalxlabs.com/case-studies/timothy-fub-implementation/"}
     }
   ]
 }

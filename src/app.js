@@ -85,20 +85,43 @@ document.querySelectorAll('[data-video]').forEach((wrap) => {
   });
 });
 
-// Directional ownership calculator. Deliberately simple arithmetic the visitor controls.
-const spend = document.querySelector('#monthly-spend');
-const usage = document.querySelector('#raw-usage');
-const monthlyOut = document.querySelector('#monthly-save');
-const annualOut = document.querySelector('#annual-save');
-
-function calc() {
-  if (!spend || !usage || !monthlyOut || !annualOut) return;
-  const s = Math.max(0, Number(spend.value) || 0);
-  const u = Math.max(0, Number(usage.value) || 0);
-  const monthly = Math.max(0, s - u);
-  monthlyOut.textContent = '$' + Math.round(monthly).toLocaleString();
-  annualOut.textContent = '$' + Math.round(monthly * 12).toLocaleString();
+// Both motion mocks replay the same way. The markup's default state is the
+// FINISHED story, so no-JS visitors get the whole picture; this winds it back to
+// empty, walks it forward a beat at a time, holds on the complete state, resets.
+// paint(i) owns what beat i looks like. Reduced motion paints the last beat once
+// and never starts a timer.
+function replay(count, hold, ms, paint) {
+  const still = matchMedia('(prefers-reduced-motion: reduce)');
+  let loop = null;
+  const sync = () => {
+    if (loop) { clearInterval(loop); loop = null; }
+    if (still.matches) { paint(count + hold); return; }
+    let i = 0;
+    paint(i);
+    loop = setInterval(() => { i = (i + 1) % (count + hold + 1); paint(i); }, ms);
+  };
+  sync();
+  still.addEventListener?.('change', sync);
 }
-spend?.addEventListener('input', calc);
-usage?.addEventListener('input', calc);
-calc();
+
+// Hero lifecycle timeline. One stop every 1.5s, two beats on the finished state.
+const timeline = document.querySelector('[data-timeline]');
+if (timeline) {
+  const stops = [...timeline.querySelectorAll('.tl-stop')];
+  replay(stops.length, 2, 1500, (i) => {
+    stops.forEach((s, n) => {
+      s.classList.toggle('on', n === i - 1);
+      s.classList.toggle('done', n < i - 1);
+    });
+  });
+}
+
+// Intent Match. The lead's own activity building up, then the matched follow up
+// that comes out of it. Slightly faster beat because it is a longer story.
+const intent = document.querySelector('[data-intent]');
+if (intent) {
+  const steps = [...intent.querySelectorAll('[data-i]')];
+  replay(steps.length, 3, 1200, (i) => {
+    steps.forEach((s, n) => s.classList.toggle('shown', n < i));
+  });
+}

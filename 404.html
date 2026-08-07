@@ -7,13 +7,13 @@
 <title>Page not found | Follow Up Boss AI Implementation</title>
 <meta name="description" content="That page does not exist. Head back to the Follow Up Boss implementation overview, or book a call to map your own lead flow.">
 <meta name="robots" content="noindex">
-<!-- Absolute paths include /fub/ because the site is served from a subdirectory and a 404
-     can be served for a path at any depth, which would break relative URLs. -->
-<link rel="icon" href="/fub/img/favicon.png">
+<!-- Absolute paths, because a 404 can be served for a path at any depth and
+     relative URLs would resolve against that depth instead of the site root. -->
+<link rel="icon" href="/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/fub/src/styles.css">
+<link rel="stylesheet" href="/src/styles.css">
 </head>
 <body>
 <main class="hero" id="main">
@@ -23,11 +23,11 @@
     <h1 style="margin-top:16px">That page is not part of the build.</h1>
     <p class="lead" style="margin-inline:auto">The link may be old or mistyped. The overview below covers the whole implementation, and the case study has the full build log.</p>
     <div class="actions" style="justify-content:center">
-      <a class="button primary large" href="/fub/">Back to the overview</a>
-      <a class="button secondary large" href="/fub/case-studies/timothy-fub-implementation/">Read the build log</a>
+      <a class="button primary large" href="/">Back to the overview</a>
+      <a class="button secondary large" href="/case-studies/timothy-fub-implementation/">Read the build log</a>
     </div>
   </div>
 </main>
-<script type="module" src="/fub/src/app.js"></script>
+<script type="module" src="/src/app.js"></script>
 </body>
 </html>
